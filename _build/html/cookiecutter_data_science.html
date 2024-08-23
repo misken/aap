@@ -1,21 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Using cookiecutter templates for project structure &#8212; aap courseweb</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=658d757c" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -41,9 +38,9 @@
           <div class="body" role="main">
             
   <section id="using-cookiecutter-templates-for-project-structure">
-<h1>Using cookiecutter templates for project structure<a class="headerlink" href="#using-cookiecutter-templates-for-project-structure" title="Permalink to this heading">¶</a></h1>
+<h1>Using cookiecutter templates for project structure<a class="headerlink" href="#using-cookiecutter-templates-for-project-structure" title="Link to this heading">¶</a></h1>
 <section id="so-how-do-you-structure-a-python-project">
-<h2>So, how do you structure a Python project?<a class="headerlink" href="#so-how-do-you-structure-a-python-project" title="Permalink to this heading">¶</a></h2>
+<h2>So, how do you structure a Python project?<a class="headerlink" href="#so-how-do-you-structure-a-python-project" title="Link to this heading">¶</a></h2>
 <p>There are no shortage of opinions on this question and there’s no one
 right answer. As the Python packaging ecosystem has evolved over time,
 so has the way one can and/or should structure Python projects. In
@@ -52,7 +49,7 @@ package vs a web app) might call for <a class="reference external" href="https:/
 layouts</a>.</p>
 </section>
 <section id="enter-the-cookiecutter">
-<h2>Enter, the Cookiecutter<a class="headerlink" href="#enter-the-cookiecutter" title="Permalink to this heading">¶</a></h2>
+<h2>Enter, the Cookiecutter<a class="headerlink" href="#enter-the-cookiecutter" title="Link to this heading">¶</a></h2>
 <p>Arising from this need to have a simple way to quickly create good
 project structures for different types of projects was the
 <a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/">Cookiecutter</a>. From
@@ -122,10 +119,10 @@ let’s head over to the <a class="reference external" href="https://github.com/
 page</a> and
 take a look at the README and other content.</p>
 <section id="creating-a-new-project-using-cookiecutter-datascience-simple">
-<h3>Creating a new project using cookiecutter-datascience-simple<a class="headerlink" href="#creating-a-new-project-using-cookiecutter-datascience-simple" title="Permalink to this heading">¶</a></h3>
+<h3>Creating a new project using cookiecutter-datascience-simple<a class="headerlink" href="#creating-a-new-project-using-cookiecutter-datascience-simple" title="Link to this heading">¶</a></h3>
 <p>Ok, let’s create new project called <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code>.</p>
 <section id="requirements-to-use-this-cookiecutter-template">
-<h4>Requirements to use this cookiecutter template:<a class="headerlink" href="#requirements-to-use-this-cookiecutter-template" title="Permalink to this heading">¶</a></h4>
+<h4>Requirements to use this cookiecutter template:<a class="headerlink" href="#requirements-to-use-this-cookiecutter-template" title="Link to this heading">¶</a></h4>
 <p>I’ve already installed cookiecutter in the <cite>aap</cite> conda virtual environment. So, the
 instructions below are only needed if you want to either pip or conda
 install cookiecutter yourself on some machine or in some virtual
@@ -137,17 +134,17 @@ package</a>
 &gt;= 1.4.0: This can be installed with pip by or conda depending on how
 you manage your Python packages:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install cookiecutter
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda config --add channels conda-forge
-$ conda install cookiecutter
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>cookiecutter
 </pre></div>
 </div>
 </section>
 <section id="to-start-a-new-project-run-from-the-directory-in-which-you-want-your-new-project-to-live">
-<h4>To start a new project, run from the directory in which you want your new project to live:<a class="headerlink" href="#to-start-a-new-project-run-from-the-directory-in-which-you-want-your-new-project-to-live" title="Permalink to this heading">¶</a></h4>
+<h4>To start a new project, run from the directory in which you want your new project to live:<a class="headerlink" href="#to-start-a-new-project-run-from-the-directory-in-which-you-want-your-new-project-to-live" title="Link to this heading">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">misken</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">datascience</span><span class="o">-</span><span class="n">simple</span>
 </pre></div>
 </div>
@@ -157,7 +154,7 @@ will get created. <a class="reference external" href="TODO">[demo screencast]</a
 </section>
 </section>
 <section id="overview-of-cookiecutter-datascience-simple-project-structure">
-<h2>Overview of cookiecutter-datascience-simple project structure<a class="headerlink" href="#overview-of-cookiecutter-datascience-simple-project-structure" title="Permalink to this heading">¶</a></h2>
+<h2>Overview of cookiecutter-datascience-simple project structure<a class="headerlink" href="#overview-of-cookiecutter-datascience-simple-project-structure" title="Link to this heading">¶</a></h2>
 <p>We won’t get into all the details now, but there’s a few things about
 the folder structure that we should discuss. Here’s the structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── pumpitup                            &lt;- Your notebooks and scripts will live in the main project folder
@@ -189,7 +186,7 @@ structure for projects in which we might need to share or deploy our code.</p>
 </ol>
 </section>
 <section id="adding-files-to-our-new-project">
-<h2>Adding files to our new project<a class="headerlink" href="#adding-files-to-our-new-project" title="Permalink to this heading">¶</a></h2>
+<h2>Adding files to our new project<a class="headerlink" href="#adding-files-to-our-new-project" title="Link to this heading">¶</a></h2>
 <p>TODO: Finish this section. The stuff below is from the blog post and needs to be changed.</p>
 <p>We’ve got some work in process in the form of a few Jupyter
 notebooks and scripts as well both raw and preprocessed data files. All of these are available from the Downloads folder for this session. You’ll notice that I’ve actually included a project folder for pumpitup that was created with the <cite>cookiecutter-datascience-simple</cite> template. Just copy the various files from it to the new project folder you created.</p>
@@ -247,7 +244,7 @@ version upon which this project will be built.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -255,7 +252,7 @@ version upon which this project will be built.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>

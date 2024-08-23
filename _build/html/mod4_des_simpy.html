@@ -1,21 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Discrete-event simulation with SimPy &#8212; aap courseweb</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=658d757c" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="discrete-event-simulation-with-simpy">
-<h1>Discrete-event simulation with SimPy<a class="headerlink" href="#discrete-event-simulation-with-simpy" title="Permalink to this heading">¶</a></h1>
+<h1>Discrete-event simulation with SimPy<a class="headerlink" href="#discrete-event-simulation-with-simpy" title="Link to this heading">¶</a></h1>
 <p>In this module we will:</p>
 <ul class="simple">
 <li><p>learn the basics of building and using discrete-event simulation (DES) models in Python using the SimPy library,</p></li>
@@ -57,7 +54,7 @@
 <li><p>deploy a Jupyter notebook to the cloud with Binder for running simulation scenarios.</p></li>
 </ul>
 <section id="downloads-and-other-resources">
-<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Link to this heading">¶</a></h2>
 <p>This downloads file will be used for the activities below.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://drive.google.com/file/d/1cVE3JCwY1pyKe0mg13i3niml2yqVba_2/view?usp=sharing">downloads_des.zip</a></p></li>
@@ -70,9 +67,9 @@ know where to find things (and put things). You’ll also find a folder named <c
 will get used later in the Activities when we learn about running Jupyter notebooks in the cloud.</p>
 </section>
 <section id="activities">
-<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<h2>Activities<a class="headerlink" href="#activities" title="Link to this heading">¶</a></h2>
 <section id="getting-started-with-simpy">
-<h3>Getting started with SimPy<a class="headerlink" href="#getting-started-with-simpy" title="Permalink to this heading">¶</a></h3>
+<h3>Getting started with SimPy<a class="headerlink" href="#getting-started-with-simpy" title="Link to this heading">¶</a></h3>
 <p>Start by opening the <code class="docutils literal notranslate"><span class="pre">simpy_getting_started_vaccine_clinic.ipynb</span></code> notebook. In it, you’ll:</p>
 <ul class="simple">
 <li><p>get an overview of what DES is and for which kinds of problems it is well suited,</p></li>
@@ -93,7 +90,7 @@ will get used later in the Activities when we learn about running Jupyter notebo
 </ul>
 </section>
 <section id="building-a-cli-for-our-vaccine-clinic-simulation-model">
-<h3>Building a CLI for our vaccine clinic simulation model<a class="headerlink" href="#building-a-cli-for-our-vaccine-clinic-simulation-model" title="Permalink to this heading">¶</a></h3>
+<h3>Building a CLI for our vaccine clinic simulation model<a class="headerlink" href="#building-a-cli-for-our-vaccine-clinic-simulation-model" title="Link to this heading">¶</a></h3>
 <p>Now we’ll make some improvements to our clinic model. In this notebook, <code class="docutils literal notranslate"><span class="pre">vaccine_clinic_model4.ipynb</span></code>, we
 will focus on building a command line interface to our model to facilitate running multiple scenarios.</p>
 <p>Here’s the screencast that goes with this notebook:</p>
@@ -103,7 +100,7 @@ will focus on building a command line interface to our model to facilitate runni
 </ul>
 </section>
 <section id="exploring-vaccine-clinic-model4-py">
-<h3>Exploring vaccine_clinic_model4.py<a class="headerlink" href="#exploring-vaccine-clinic-model4-py" title="Permalink to this heading">¶</a></h3>
+<h3>Exploring vaccine_clinic_model4.py<a class="headerlink" href="#exploring-vaccine-clinic-model4-py" title="Link to this heading">¶</a></h3>
 <p>We have made a number of improvements to the model:</p>
 <ul class="simple">
 <li><p>Specifying the global sim inputs through a command line interface (CLI),</p></li>
@@ -124,7 +121,7 @@ a program works. And of course, it’s a great way to debug your programs.</p>
 </ul>
 </section>
 <section id="using-the-vaccine-clinic-model-to-explore-scenarios">
-<h3>Using the vaccine clinic model to explore scenarios<a class="headerlink" href="#using-the-vaccine-clinic-model-to-explore-scenarios" title="Permalink to this heading">¶</a></h3>
+<h3>Using the vaccine clinic model to explore scenarios<a class="headerlink" href="#using-the-vaccine-clinic-model-to-explore-scenarios" title="Link to this heading">¶</a></h3>
 <p>Now that you’ve got a better understanding of DES modeling and how the vaccine clinic model
 works, we’ll end this module by exploring a few different scenarios related to clinic
 capacity and patient volume. Open <code class="docutils literal notranslate"><span class="pre">running_simulation_scenarios.ipynb</span></code>.</p>
@@ -139,7 +136,7 @@ next screencast, you’ll be using the <code class="docutils literal notranslate
 </ul>
 </section>
 <section id="extending-the-vaccine-clinic-model">
-<h3>Extending the vaccine clinic model<a class="headerlink" href="#extending-the-vaccine-clinic-model" title="Permalink to this heading">¶</a></h3>
+<h3>Extending the vaccine clinic model<a class="headerlink" href="#extending-the-vaccine-clinic-model" title="Link to this heading">¶</a></h3>
 <p>We’ll end this module by exploring a few possible model design changes extensions. Open <code class="docutils literal notranslate"><span class="pre">model_extensions.ipynb</span></code>.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://youtu.be/ySuvGauU7U0">SCREENCAST: Vaccine clinic model extensions</a> (9:32)</p></li>
@@ -190,7 +187,7 @@ next screencast, you’ll be using the <code class="docutils literal notranslate
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -198,7 +195,7 @@ next screencast, you’ll be using the <code class="docutils literal notranslate
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>

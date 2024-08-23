@@ -64,7 +64,7 @@ Review of Python and analytics
 -------------------------------
 
 As mentioned on the home page, this course is a follow on to my `MIS 4470/5470 - Practical Computing for
-Data Analytics course <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/index.html>`_. In
+Data Analytics course <http://www.sba.oakland.edu/faculty/isken/courses/pcda/index.html>`_. In
 that course we learned to use both R and Python for various analytical computing tasks. So, I
 certainly know that unless you have continued to use these computational and analytical tools, you will
 have forgotten many details. Nevertheless, you should be well positioned to quickly relearn things

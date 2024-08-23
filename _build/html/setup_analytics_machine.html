@@ -1,21 +1,18 @@
 
+<!DOCTYPE html>
 
-<!doctype html>
-
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Setting up your analytics machine &#8212; aap courseweb</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=658d757c" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -50,7 +47,7 @@
           <div class="body" role="main">
             
   <section id="setting-up-your-analytics-machine">
-<h1>Setting up your analytics machine<a class="headerlink" href="#setting-up-your-analytics-machine" title="Permalink to this heading">¶</a></h1>
+<h1>Setting up your analytics machine<a class="headerlink" href="#setting-up-your-analytics-machine" title="Link to this heading">¶</a></h1>
 <p>This course will be a blend of analytics and software engineering for analytics. As such, I will start by helping you get your computer set up as your <em>analytics machine</em> for this course. You will:</p>
 <ul class="simple">
 <li><p>Install several pieces of software including the Anaconda Python distribution, one or more IDEs, git and GitHub Desktop, a good text editor.</p></li>
@@ -59,10 +56,10 @@
 <li><p>create a free Kaggle account if you don’t already have one.</p></li>
 </ul>
 <section id="overview-of-computing-platform-options">
-<h2>Overview of computing platform options<a class="headerlink" href="#overview-of-computing-platform-options" title="Permalink to this heading">¶</a></h2>
+<h2>Overview of computing platform options<a class="headerlink" href="#overview-of-computing-platform-options" title="Link to this heading">¶</a></h2>
 <section id="a-look-back-at-the-pcda-course">
-<h3>A look back at the pcda course<a class="headerlink" href="#a-look-back-at-the-pcda-course" title="Permalink to this heading">¶</a></h3>
-<p>In the <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/mis5470/pcda_vm.html">pcda course we used a virtual machine running Lubuntu Linux</a>. We did that for a few reasons:</p>
+<h3>A look back at the pcda course<a class="headerlink" href="#a-look-back-at-the-pcda-course" title="Link to this heading">¶</a></h3>
+<p>In the <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/pcda/pcda_vm.html">pcda course we used a virtual machine running Lubuntu Linux</a>. We did that for a few reasons:</p>
 <ul class="simple">
 <li><p>Many of these tools are totally new to students in the pcda class.</p></li>
 <li><p>I wanted everyone to have the same computing environment with all necessary software pre-installed.</p></li>
@@ -71,24 +68,20 @@
 <p>However, I also encouraged students in that class to install the major pieces of software (R, R Studio, Anaconda Python, a good text editor) on their <em>host operating system</em> (Windows or Mac or even Linux). I did this to emphasize that these tools are all freely available and cross-platform. By doing this, you also had multiple ways to access the software used in the pcda course. Finally, I wanted students to become familiar with installing and maintaining commonly used analytics software tools.</p>
 </section>
 <section id="choices-for-the-current-aap-course">
-<h3>Choices for the current aap course<a class="headerlink" href="#choices-for-the-current-aap-course" title="Permalink to this heading">¶</a></h3>
-<p>My plan for this course is that most, if not all, students will be installing and using all of the necessary software for the course on their host operating system. This could be Windows, Mac or Linux. I’m doing all of the course development for this course in Windows and all of the screencasts will be Windows based. There are several reasons for this:</p>
+<h3>Choices for the current aap course<a class="headerlink" href="#choices-for-the-current-aap-course" title="Link to this heading">¶</a></h3>
+<p>My plan for this course is that students will be installing and using all of the necessary software for the course on their host operating system. This could be Windows, Mac or Linux. I’m doing all of the course development for this course in Windows and all of the screencasts will be Windows based. There are several reasons for this:</p>
 <ul class="simple">
 <li><p>Learning Linux is not one of the learning objectives for the course. As you’ll see, Linux knowledge is certainly useful and even in the Windows/Mac worlds, we need to know some Linux. However, you’ve already had sufficient exposure to Linux through the pcda class. Even if you didn’t take the pcda course and have zero Linux knowledge, you should be able to self-learn the little bit needed as we go.</p></li>
 <li><p>We get better performance if we don’t have to use a VM as we can access all of the system RAM and CPUs.</p></li>
 <li><p>Many of you will be working or are working in corporate environments in which Windows or Mac OS is used. I want you to see that we can do analytics work in Windows just fine. In fact, the VS Code IDE is becoming quite popular and is something you could use (more on this below).</p></li>
 </ul>
 <p>Below, I’ll be provide guidance on getting all of the course software installed in Windows. If you are a Mac user, it’s usually pretty simple to adapt the instructions (e.g. it’s often just selecting the correct installer).</p>
-<p>However, I will also be providing a Lubuntu Linux based VM for this course, just as I did for the pcda course. In fact,
-you can just <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/mis5470/pcda_vm.html">go to the pcda coursweb virtual machine page</a> and follow the instructions to download and install it. This might be useful if the only computer you have is a work machine that has limited capability for new software installs. Of course, to use the VM you do need to be able to install VirtualBox. If you do decide to use the pcda VM for this
-course (which I do <strong>not</strong> recommend), you will have to create a new conda virtual environment - instructions for that are provided below.</p>
-<p>Again, you do <strong>NOT</strong> need to use a VM for this course. I won’t be. I’ll be using Windows.</p>
 </section>
 </section>
 <section id="software-installs">
-<h2>Software installs<a class="headerlink" href="#software-installs" title="Permalink to this heading">¶</a></h2>
+<h2>Software installs<a class="headerlink" href="#software-installs" title="Link to this heading">¶</a></h2>
 <section id="installing-anaconda-python">
-<h3>Installing Anaconda Python<a class="headerlink" href="#installing-anaconda-python" title="Permalink to this heading">¶</a></h3>
+<h3>Installing Anaconda Python<a class="headerlink" href="#installing-anaconda-python" title="Link to this heading">¶</a></h3>
 <p>You’ll be downloading the Individual Edition.</p>
 <p><a class="reference external" href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a></p>
 <p>Click the big Download button and you’ll get taken to a section with the 64bit Windows installer (or Mac). Install it. Here’s a screencast I made that walks you through the process of installing and launching Anaconda (a few different ways).</p>
@@ -98,7 +91,7 @@ course (which I do <strong>not</strong> recommend), you will have to create a ne
 </ul>
 </section>
 <section id="getting-conda-ready-to-use-virtual-environments-within-jupyter">
-<h3>Getting conda ready to use virtual environments within Jupyter<a class="headerlink" href="#getting-conda-ready-to-use-virtual-environments-within-jupyter" title="Permalink to this heading">¶</a></h3>
+<h3>Getting conda ready to use virtual environments within Jupyter<a class="headerlink" href="#getting-conda-ready-to-use-virtual-environments-within-jupyter" title="Link to this heading">¶</a></h3>
 <p>This has been a source of confusion/frustration over the years for many Jupyter users. I finally
 wrote up a <a class="reference external" href="https://bitsofanalytics.org/posts/jupyter-conda-envs/jupyter_conda_envs.html">blog post to remind myself the best way to do this</a>. I encourage you to read through it before continuing with this step.</p>
 <ul class="simple">
@@ -113,7 +106,7 @@ some extensions</a>. Just start a open an Anaconda Prompt shell and do the follo
 conda virtual environments. Again, see my blog post mentioned above for more details.</p>
 </section>
 <section id="setting-up-our-conda-virtual-environment">
-<h3>Setting up our conda virtual environment<a class="headerlink" href="#setting-up-our-conda-virtual-environment" title="Permalink to this heading">¶</a></h3>
+<h3>Setting up our conda virtual environment<a class="headerlink" href="#setting-up-our-conda-virtual-environment" title="Link to this heading">¶</a></h3>
 <p>After installing Anaconda Python on your computer, the next thing you’ll do is to create a new conda virtual environment based on a (YAML) configuration file that I’ve created. Back in the pcda class we learned a bit about conda virtual environments and used one called <code class="docutils literal notranslate"><span class="pre">datasci</span></code> that I created on the pcda VM. If you want an overview on conda virtual environments as well as the details, see:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://towardsdatascience.com/getting-started-with-python-environments-using-conda-32e9f2779307">Getting started with Python environments (using Conda)</a></p></li>
@@ -124,10 +117,6 @@ conda virtual environments. Again, see my blog post mentioned above for more det
 <ul class="simple">
 <li><p><a class="reference external" href="https://drive.google.com/file/d/1HrE6_9ZhK3xqpGS0Z_QDAoBraMbntCA8/view?usp=sharing">Download aap.yml</a></p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you decide to use the pcda VM, you’ll still want to create the <code class="docutils literal notranslate"><span class="pre">aap</span></code> conda virtual env as it installs some software that I didn’t install in the <code class="docutils literal notranslate"><span class="pre">datasci</span></code> virtual env I created for the pcda class.</p>
-</div>
 <p>After downloading it, put it somewhere convenient in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the <a class="reference external" href="https://youtu.be/Z5O6yORGSwg">Installing and Getting Started with Anaconda Python screencast</a>). You should see <code class="docutils literal notranslate"><span class="pre">(base)</span></code> to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don’t want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don’t end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the <code class="docutils literal notranslate"><span class="pre">aap.yml</span></code> file. If you’re in this class I’m sure you know how to do a <code class="docutils literal notranslate"><span class="pre">cd</span></code> (yes, same in Windows as it is in Linux).</p>
 <p>Let’s look at the <code class="docutils literal notranslate"><span class="pre">aap.yml</span></code> file. It’s pretty self-explanatory (other than maybe <code class="docutils literal notranslate"><span class="pre">channels</span></code>). See the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">Creating an environment file manually</a> for details on YAML environment files for conda. The <code class="docutils literal notranslate"><span class="pre">channels</span></code> section is telling conda where to look to find software to install. The order matters. In <code class="docutils literal notranslate"><span class="pre">aap</span></code>, conda will first look in the default Anaconda software channel and if not found, will look in a channel called <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. You can think of it as the CRAN for user contributed packages for the Anaconda world. We’ll learn more about dependency management throughout the course. After we create our new <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment, we’ll have all of the packages installed that are in our <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> section (and a whole lot more since these packages have their own dependencies).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">aap</span>
@@ -178,10 +167,10 @@ conda virtual environments. Again, see my blog post mentioned above for more det
 </div>
 </section>
 <section id="ide-options">
-<h3>IDE options<a class="headerlink" href="#ide-options" title="Permalink to this heading">¶</a></h3>
+<h3>IDE options<a class="headerlink" href="#ide-options" title="Link to this heading">¶</a></h3>
 <p>While we will be using Jupyter Notebooks quite a bit (comes with Anaconda Python distro), we will also be using an IDE, especially for longer and more complex programs and when we want a visual debugger. There are several high quality IDEs for Python that are freely available. I will suggest two and you can decide what you want to do. If you are an experienced programmer and already have a development environment setup that you like (e.g. a good text editor and running Python from the command line), feel free to do that. I don’t care what IDE you use. I will be demonstrating some things in class like using the integrated version control capabilities of an IDE or using the visual debugger, but it’s not critical that you be using the same IDE as me. I’ll likely use a mix of PyCharm (my goto Python IDE for years now) and VSCode (because it’s lightweight, gaining popularity and I like to learn new things).</p>
 <section id="pycharm">
-<h4>PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this heading">¶</a></h4>
+<h4>PyCharm<a class="headerlink" href="#pycharm" title="Link to this heading">¶</a></h4>
 <p>PyCharm is a very popular, full featured IDE for working with Python. They have a freely available Community Edition.</p>
 <p>Download the Community Edition installer from going to main page: <a class="reference external" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a> and clicking Download, which takes you to <a class="reference external" href="https://www.jetbrains.com/pycharm/download/#section=windows">https://www.jetbrains.com/pycharm/download/#section=windows</a> (for Windows) and then select Community. After the installer downloads, run it and install PyCharm. If you’ve previously installed PyCharm you’ll get asked about importing existing settings. Do whatever makes sense for you. Here are two short screencasts I made that walks through the install and getting started using PyCharm.</p>
 <ul class="simple">
@@ -192,7 +181,7 @@ conda virtual environments. Again, see my blog post mentioned above for more det
 <p>I also recommend the official <a class="reference external" href="https://www.jetbrains.com/help/pycharm/quick-start-guide.html">PyCharm Quick Start Guide</a>. There is a ton of helpful information and many tutorials/screencasts available on the web.</p>
 </section>
 <section id="visual-studio-code-vscode">
-<h4>Visual Studio Code (VSCode)<a class="headerlink" href="#visual-studio-code-vscode" title="Permalink to this heading">¶</a></h4>
+<h4>Visual Studio Code (VSCode)<a class="headerlink" href="#visual-studio-code-vscode" title="Link to this heading">¶</a></h4>
 <p>Microsoft released VSCode as a free and open source package to the world back in 2016. It’s a powerful, yet lightweight, code editor with all the nice standard features of a good IDE such as code completion, syntax highlighting, visual debugger, integration with VCS, and more. I just started using it a years ago and it’s quite nice. You could certainly use it for this course - many students have in the past.</p>
 <p>You can find installers for Windows, Linux, and Mac at <a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a>. Download and install in the usual way. When you run it for the first time and open some Python file, you’ll get asked about installing the Python Exentions. Yes, DO THIS. That will enable things like syntax highlighting and autocomplete. You want that.</p>
 <p>You’ll might also be prompted to select a Python interpreter. VSCode should recognize that Anaconda is installed and you can select the aap conda virtual environment we created above.</p>
@@ -206,7 +195,7 @@ at the lower right of the window.</p>
 <img alt="_images/vscode_envs.png" src="_images/vscode_envs.png" />
 </section>
 <section id="pycharm-or-vscode">
-<h4>PyCharm or VSCode?<a class="headerlink" href="#pycharm-or-vscode" title="Permalink to this heading">¶</a></h4>
+<h4>PyCharm or VSCode?<a class="headerlink" href="#pycharm-or-vscode" title="Link to this heading">¶</a></h4>
 <p>It’s up to you. There are plenty of comparisons out there. They both have a ton of features though VSCode has a pretty sparse menu structure which makes it easier for beginners - other features are accessible from a command palette. PyCharm enforces the use of a folder based <em>Project</em> while VSCode seems to use the notion of <em>workspaces</em> (which could be based on one or more folders). In general, we’ll be thinking of each project being in a folder whether we use PyCharm, VSCode or something else.</p>
 <p>Both actually now support notebook use from within the IDE itself. I’ve only tinkered around with this a bit. When I use notebooks, I use the browser based Jupyter Lab interface and when I’m working with <code class="docutils literal notranslate"><span class="pre">.py</span></code> files, I use an IDE. Here are two short articles on using notebooks within VSCode (and PyCharm). The first is from a terrific blog named Practical Business Python (written by Chris Moffitt) - we’ll be visiting several of his posts throughout the semester.</p>
 <ul class="simple">
@@ -215,16 +204,16 @@ at the lower right of the window.</p>
 </ul>
 </section>
 <section id="a-third-ide-option-spyder">
-<h4>A third IDE option (?) - Spyder<a class="headerlink" href="#a-third-ide-option-spyder" title="Permalink to this heading">¶</a></h4>
+<h4>A third IDE option (?) - Spyder<a class="headerlink" href="#a-third-ide-option-spyder" title="Link to this heading">¶</a></h4>
 <p>Anaconda ships with an IDE called <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a>. We used Spyder this past year in my pcda class. However,
 there’s been some trickiness in getting Spyder working with a specific conda virtual environment. The Spyder folks appear to be trying to address this and have even released standalone Windows Installers for Spyder (as opposed to using the one that ships with Anaconda). I’ve
 messed around with this a bit but need to experiment some more. So, if you are able to get Spyder working with the <code class="docutils literal notranslate"><span class="pre">aap</span></code> virtual environment, you can certainly use it for this class. It’s got a visual debugger and integration with git for version control. See <a class="reference external" href="https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder">https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder</a> for more info on this issue. If someone does get this working, please post how you did it in the class Q&amp;A Forum in Moodle.</p>
 </section>
 </section>
 <section id="git-and-github">
-<h3>git and GitHub<a class="headerlink" href="#git-and-github" title="Permalink to this heading">¶</a></h3>
+<h3>git and GitHub<a class="headerlink" href="#git-and-github" title="Link to this heading">¶</a></h3>
 <section id="installing-git">
-<h4>Installing git<a class="headerlink" href="#installing-git" title="Permalink to this heading">¶</a></h4>
+<h4>Installing git<a class="headerlink" href="#installing-git" title="Link to this heading">¶</a></h4>
 <p>Some of you may have used git and GitHub in the pcda class. We will definitely use it in this class. While git is included with most Linux distributions, we need to install it in Windows/Mac. When we do, you’ll see that we actually get a Linux bash shell that we use for running git commands.</p>
 <p>To install git on Windows/Mac, go to the Git site at <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a> and follow the instructions to download and install the appropriate version for your operating system. Here’s a screencast to walk you through the install and launching git bash from the Start Menu.</p>
 <ul class="simple">
@@ -232,11 +221,11 @@ messed around with this a bit but need to experiment some more. So, if you are a
 </ul>
 </section>
 <section id="creating-a-github-account">
-<h4>Creating a GitHub account<a class="headerlink" href="#creating-a-github-account" title="Permalink to this heading">¶</a></h4>
+<h4>Creating a GitHub account<a class="headerlink" href="#creating-a-github-account" title="Link to this heading">¶</a></h4>
 <p>You will also need a free GitHub account if you don’t already have one. Create a free GitHub account by going to <a class="reference external" href="https://github.com/">https://github.com/</a> and following the instructions.</p>
 </section>
 <section id="installing-github-desktop">
-<h4>Installing GitHub Desktop<a class="headerlink" href="#installing-github-desktop" title="Permalink to this heading">¶</a></h4>
+<h4>Installing GitHub Desktop<a class="headerlink" href="#installing-github-desktop" title="Link to this heading">¶</a></h4>
 <p>There were some large changes last year with respect to how GitHub handles authentication from various apps. The big one for us is that it is not going to be possible to do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> operations from the git bash shell using your GitHub login to authenticate (unless you create an SSH key - more on that below). In the past, you’d just get prompted for your GitHub username and password. For security reasons, GitHub is phasing this out and requiring something known as <em>Personal Access Tokens</em>. One thing you can do is use the freely available <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> application to handle the authentication and push/pull operations between your local computer and GitHub. For example, I could still do my local git work using the git bash shell and then just hop over to GitHub Desktop to push things up to my GitHub account. I’ve created a screencast to show you how this works. In the screencast I’ll also show you what happens when you try to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> from the git bash shell and discuss how this is related to the new credentialing method used by git (that we had a prompt for during the git install).</p>
 <p>However, it is possible to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> from the git bash shell if you first set up an SSH key. See <a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">these instructions at GitHub on setting up an SSH key</a> to use with your GitHub account. This is actually
 the method I use.</p>
@@ -244,18 +233,18 @@ the method I use.</p>
 </section>
 </section>
 <section id="text-editor">
-<h3>Text editor<a class="headerlink" href="#text-editor" title="Permalink to this heading">¶</a></h3>
+<h3>Text editor<a class="headerlink" href="#text-editor" title="Link to this heading">¶</a></h3>
 <p>Download and install a good text editor such as <a class="reference external" href="https://notepad-plus-plus.org/downloads/">Notepad++</a>, <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a>, or any other good text editor. It should support syntax highlighting and regular expressions.</p>
 </section>
 <section id="getting-the-pdsh-notebooks">
-<h3>Getting the PDSH notebooks<a class="headerlink" href="#getting-the-pdsh-notebooks" title="Permalink to this heading">¶</a></h3>
+<h3>Getting the PDSH notebooks<a class="headerlink" href="#getting-the-pdsh-notebooks" title="Link to this heading">¶</a></h3>
 <p>As mentioned on the <a class="reference internal" href="textbooks.html"><span class="doc">Textbooks</span></a> page, the PDSH textbook has a really good set of companion Jupyter notebooks. You can get them from <a class="reference external" href="https://github.com/jakevdp/PythonDataScienceHandbook">JVP’s GitHub site</a>.  You can either clone the repo or download it as a zip file. You should definitely get these as I’ll be referring to them as references and review items. Here’s a short screencast on doing this.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://youtu.be/859upu5_URo">SCREENCAST: Getting the PDSH notebooks</a></p></li>
 </ul>
 </section>
 <section id="kaggle">
-<h3>kaggle<a class="headerlink" href="#kaggle" title="Permalink to this heading">¶</a></h3>
+<h3>kaggle<a class="headerlink" href="#kaggle" title="Link to this heading">¶</a></h3>
 <p>Get a free <a class="reference external" href="https://www.kaggle.com/">Kaggle</a> account as it’s a great learning resource.</p>
 </section>
 </section>
@@ -321,7 +310,7 @@ the method I use.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -329,7 +318,7 @@ the method I use.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
