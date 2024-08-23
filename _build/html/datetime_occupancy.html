@@ -1,0 +1,147 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Datetime and occupancy analysis &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Interactivity in data visualization" href="interactive_viz.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="interactive_viz.html" title="Interactivity in data visualization"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod5_data_wrangling_analysis.html" accesskey="U">Data wrangling, visualization, and analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Datetime and occupancy analysis</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="datetime-and-occupancy-analysis">
+<h1>Datetime and occupancy analysis<a class="headerlink" href="#datetime-and-occupancy-analysis" title="Permalink to this heading">¶</a></h1>
+<p>Many business analysis tasks involve working with datetime data. Such data is handled a bit differently in Python than in MS Office, though there are some similarities. To confuse things a bit there are a few different datetime implementations including base Python, numpy and pandas. In this module, you will:</p>
+<ul class="simple">
+<li><p>learn about the main datetime data types in base Python, numpy, and pandas,</p></li>
+<li><p>explore datetime functionality in pandas,</p></li>
+<li><p>use appropriate techniques to do time averages and other statistics with timestamped transaction data,</p></li>
+<li><p>do basic occupancy anaysis with the open source package, hillmaker.</p></li>
+</ul>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1vHynkVUA0H584nmyFOOREwkj2tEFNZwL/view?usp=sharing">downloads_datetime_occupancy.zip</a></p></li>
+<li><p>The <a class="reference external" href="https://wesmckinney.com/book/time-series.html">Time Series chapter in DAP</a> has a very thorough introduction to working with dates and times in Python.</p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>Start with <code class="docutils literal notranslate"><span class="pre">datetime_exploring.ipynb</span></code>. This will give you a good overview of the different datetime implementations and libraries and demonstrate important pandas datetime functionality. You’ll see that I added a few cells in the notebook that aren’t in the screencast. It’s just a few things I learned recently about conversion of <code class="docutils literal notranslate"><span class="pre">timedelta</span></code> objects.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/yoYHhmS_Gw4">SCREENCAST: Datetimes in Python</a> (28:25)</p></li>
+</ul>
+<p>Then move on to <code class="docutils literal notranslate"><span class="pre">daily_averages_cycleshare.ipynb</span></code>. In this notebook we’ll encounter some challenges associated with analyzing timestamped data. There’s an optional Part 2 notebook entitled <code class="docutils literal notranslate"><span class="pre">daily_averages_cycleshare_part2.ipynb</span></code> if you want to dig a little deeper.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/qW1ZvdSPv48">SCREENCAST: Computing with timestamped data</a> (13:22)</p></li>
+</ul>
+<p>Finally, open <code class="docutils literal notranslate"><span class="pre">hillmaker_basic_usage_cycleshare.ipynb</span></code>. In this notebook you’ll get an introduction to an open source tool I developed many years ago (originally in VBA but now in Python) for doing occupancy analysis in healthcare systems. However, it is actually applicable to any sort of data in which you have a “start” timestamp and and “end” timestamp and you are interested in how many things are in the system at various points in time and in summary statistics by time of day and day of week. For example, in healthcare we would use hillmaker to look at the number of patients in different surgical recovery areas by time of day and day of week.</p>
+<p>I had a student a few semesers ago who used it to track the number of software licenses in use in a computing cluster for different applications by time of day and day of week. More recently, another former student who now works for a healthcare system in North Carolina contacted me to say he was using <strong>hillmaker</strong> for several capacity planning projects. Even better, he had some ideas for enhancements and now is an active contributor to the <a class="reference external" href="https://github.com/misken/hillmaker">hillmaker project</a>.</p>
+<p>In this module we’ll use it to see how many bikes are in use in a cycle share program by time of day and day of week.</p>
+<p>Another objective for this module is to introduce you to a pretty simple open source project. There are a number of improvements I’d like to make to hillmaker. If anyone is interested in getting involved in the project, just let me know.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/i3edOEpvaTg">SCREENCAST: Occupancy analysis with hillmaker</a> (13:17)</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Datetime and occupancy analysis</a><ul>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="interactive_viz.html"
+                          title="previous chapter">Interactivity in data visualization</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/datetime_occupancy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="interactive_viz.html" title="Interactivity in data visualization"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod5_data_wrangling_analysis.html" >Data wrangling, visualization, and analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Datetime and occupancy analysis</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

@@ -1,0 +1,155 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Classification models for Pump it Up project &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Excel with Python" href="mod3_excel_with_python.html" />
+    <link rel="prev" title="Pump it Up: Data Prep" href="mod2c_pumpitup_dataprep.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod3_excel_with_python.html" title="Excel with Python"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod2c_pumpitup_dataprep.html" title="Pump it Up: Data Prep"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" accesskey="U">Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Classification models for Pump it Up project</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="classification-models-for-pump-it-up-project">
+<h1>Classification models for Pump it Up project<a class="headerlink" href="#classification-models-for-pump-it-up-project" title="Permalink to this heading">¶</a></h1>
+<p>In this submodule, we’ll build a number of classification models for the <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> project. In particular, we will explore:</p>
+<ul class="simple">
+<li><p>using sklearn transformers and pipelines to streamline workflow,</p></li>
+<li><p>logistic regression with regularization,</p></li>
+<li><p>random forests and boosted trees and other ensembles.</p></li>
+</ul>
+<p>You’ll be working in your newly created <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> project folder.</p>
+<p>Start by opening the <code class="docutils literal notranslate"><span class="pre">model_exploration.ipynb</span></code> notebook in Jupyter Lab.</p>
+<p>Here is are screencasts to help guide you through the notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/ZIrvHNyj13Q">SCREENCAST: Intro and data preprocessing</a> (5:46)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/_OWWa8iZMTI">SCREENCAST: Logistric regression review and overview of regularization</a> (10:49)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/UPN27ALQWQI">SCREENCAST: Preprocessing with column transformers</a> (8:10)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/4S6MNqIQXwA">SCREENCAST: Logistic regression model and solvers</a> (3:11)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/Ynzp-ErKMl4">SCREENCAST: Creating a preprocessing and model estimation pipeline</a> (3:17)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/hUf_RBaOoLk">SCREENCAST: Data partitioning and modeling fitting</a> (17:39)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/xgwUH-jMTqY">SCREENCAST: Cross validation and Predictions</a> (7:41)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/X3pVedBFI0Q">SCREENCAST: Automation and Model persistence</a> (14:03)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/RcX5f6ckgCM">SCREENCAST: Random forests</a> (6:10)</p></li>
+</ul>
+<section id="optional-advanced-material">
+<h2>OPTIONAL ADVANCED MATERIAL<a class="headerlink" href="#optional-advanced-material" title="Permalink to this heading">¶</a></h2>
+<p>If you want to learn a bit about one more popular machine learning technique, <em>gradient boosting machines</em>, you can check out the following short intro in the <code class="docutils literal notranslate"><span class="pre">gradient_boosting.ipynb</span></code> notebook - just take a stroll through to learn about one of the newer classification techniques available in sklearn.</p>
+</section>
+<section id="and-we-re-done-with-module-2">
+<h2>And we’re done with Module 2<a class="headerlink" href="#and-we-re-done-with-module-2" title="Permalink to this heading">¶</a></h2>
+<p>Next we’ll be using Python to do a bunch of analytics work that we’d usually do in Excel.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Classification models for Pump it Up project</a><ul>
+<li><a class="reference internal" href="#optional-advanced-material">OPTIONAL ADVANCED MATERIAL</a></li>
+<li><a class="reference internal" href="#and-we-re-done-with-module-2">And we’re done with Module 2</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod2c_pumpitup_dataprep.html"
+                          title="previous chapter">Pump it Up: Data Prep</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod3_excel_with_python.html"
+                          title="next chapter">Excel with Python</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod2d_pumpitup_modeling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod3_excel_with_python.html" title="Excel with Python"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod2c_pumpitup_dataprep.html" title="Pump it Up: Data Prep"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" >Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Classification models for Pump it Up project</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

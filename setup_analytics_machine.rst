@@ -16,7 +16,7 @@ Overview of computing platform options
 A look back at the pcda course
 ------------------------------
 
-In the `pcda course we used a virtual machine running Lubuntu Linux <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/pcda_vm.html>`_. We did that for a few reasons:
+In the `pcda course we used a virtual machine running Lubuntu Linux <http://www.sba.oakland.edu/faculty/isken/courses/pcda/pcda_vm.html>`_. We did that for a few reasons:
 
 * Many of these tools are totally new to students in the pcda class.
 * I wanted everyone to have the same computing environment with all necessary software pre-installed.
@@ -27,19 +27,13 @@ However, I also encouraged students in that class to install the major pieces of
 Choices for the current aap course
 ----------------------------------
 
-My plan for this course is that most, if not all, students will be installing and using all of the necessary software for the course on their host operating system. This could be Windows, Mac or Linux. I'm doing all of the course development for this course in Windows and all of the screencasts will be Windows based. There are several reasons for this:
+My plan for this course is that students will be installing and using all of the necessary software for the course on their host operating system. This could be Windows, Mac or Linux. I'm doing all of the course development for this course in Windows and all of the screencasts will be Windows based. There are several reasons for this:
 
 * Learning Linux is not one of the learning objectives for the course. As you'll see, Linux knowledge is certainly useful and even in the Windows/Mac worlds, we need to know some Linux. However, you've already had sufficient exposure to Linux through the pcda class. Even if you didn't take the pcda course and have zero Linux knowledge, you should be able to self-learn the little bit needed as we go.
 * We get better performance if we don't have to use a VM as we can access all of the system RAM and CPUs.
 * Many of you will be working or are working in corporate environments in which Windows or Mac OS is used. I want you to see that we can do analytics work in Windows just fine. In fact, the VS Code IDE is becoming quite popular and is something you could use (more on this below).
 
 Below, I'll be provide guidance on getting all of the course software installed in Windows. If you are a Mac user, it's usually pretty simple to adapt the instructions (e.g. it's often just selecting the correct installer).
-
-However, I will also be providing a Lubuntu Linux based VM for this course, just as I did for the pcda course. In fact,
-you can just `go to the pcda coursweb virtual machine page <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/pcda_vm.html>`_ and follow the instructions to download and install it. This might be useful if the only computer you have is a work machine that has limited capability for new software installs. Of course, to use the VM you do need to be able to install VirtualBox. If you do decide to use the pcda VM for this
-course (which I do **not** recommend), you will have to create a new conda virtual environment - instructions for that are provided below. 
-
-Again, you do **NOT** need to use a VM for this course. I won't be. I'll be using Windows.
 
 Software installs
 ==================
@@ -88,10 +82,6 @@ After installing Anaconda Python on your computer, the next thing you'll do is t
 For this course, I've created a virtual environment called ``aap`` (of course). Here's a link to the YAML config file that defines this environment:
 
 * `Download aap.yml <https://drive.google.com/file/d/1HrE6_9ZhK3xqpGS0Z_QDAoBraMbntCA8/view?usp=sharing>`_
-
-.. note::
-
-   If you decide to use the pcda VM, you'll still want to create the ``aap`` conda virtual env as it installs some software that I didn't install in the ``datasci`` virtual env I created for the pcda class.
 
 After downloading it, put it somewhere convenient in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the `Installing and Getting Started with Anaconda Python screencast <https://youtu.be/Z5O6yORGSwg>`_). You should see ``(base)`` to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don't want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don't end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the ``aap.yml`` file. If you're in this class I'm sure you know how to do a ``cd`` (yes, same in Windows as it is in Linux). 
 

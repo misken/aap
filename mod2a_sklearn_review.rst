@@ -6,13 +6,13 @@ Intro
 ====================
 
 The `sckit-learn module <http://scikit-learn.org/stable/>`_ is a full featured Python module for all kinds of data analysis and predictive modeling algorithms. In
-the pcda class we did `one session at the end of the semester <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/modeling3_unsupervised_scikit_learn.html>`_ that just introduced this library and did some basic statistical/ML modeling. We'll start by reviewing the basics of using sklearn for statistical and machine learning model building and learn about ensemble models.
+the pcda class we did `one session at the end of the semester <http://www.sba.oakland.edu/faculty/isken/courses/pcda/modeling3_unsupervised_scikit_learn.html>`_ that just introduced this library and did some basic statistical/ML modeling. We'll start by reviewing the basics of using sklearn for statistical and machine learning model building and learn about ensemble models.
 
   
 Readings and review activities
 ===============================
 
-As a review, first take a look through the following sections (and notebooks) in PDSH. We covered all of this back in the `pcda class in our final session <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/modeling3_unsupervised_scikit_learn.html>`_. Going through the notebooks will get you back up to speed with sklearn and ML basics.
+As a review, first take a look through the following sections (and notebooks) in PDSH. We covered all of this back in the `pcda class in our final session <http://www.sba.oakland.edu/faculty/isken/courses/pcda/modeling3_unsupervised_scikit_learn.html>`_. Going through the notebooks will get you back up to speed with sklearn and ML basics.
 
 * PDSH - Ch 5: Scikit-Learn
 

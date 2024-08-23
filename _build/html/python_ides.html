@@ -1,0 +1,176 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python IDEs and AoC Programming Puzzles &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Statistical/ML modeling with scikit-learn" href="mod2_statml_modeling_sklearn.html" />
+    <link rel="prev" title="Jupyter notebooks" href="jupyter_notebooks.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod2_statml_modeling_sklearn.html" title="Statistical/ML modeling with scikit-learn"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="jupyter_notebooks.html" title="Jupyter notebooks"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod1_foundation.html" accesskey="U">Module 1: Foundation for advanced analytics with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Python IDEs and AoC Programming Puzzles</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="python-ides-and-aoc-programming-puzzles">
+<h1>Python IDEs and AoC Programming Puzzles<a class="headerlink" href="#python-ides-and-aoc-programming-puzzles" title="Permalink to this heading">¶</a></h1>
+<section id="intro-and-objectives">
+<h2>Intro and Objectives<a class="headerlink" href="#intro-and-objectives" title="Permalink to this heading">¶</a></h2>
+<p>On the <a class="reference internal" href="setup_analytics_machine.html"><span class="doc">Setting up your analytical machine</span></a> page you learned a bit about a few integrated development environments (IDEs) for working with Python. Now, I want to give you a brief intro to PyCharm through a common use case: we start development in a Jupyter notebook and then decide to migrate to PyCharm. PyCharm has a zillion features and can be a bit overwhelming. We will focus on a few key basic features and concepts and then you can built on that. In particular, we will:</p>
+<ul class="simple">
+<li><p>Create a new PyCharm Project based on an existing folder containing a notebook and data</p></li>
+<li><p>Create a new Python file and copy in code from a Jupyter notebook</p></li>
+<li><p>Run our Python program and learn about run <em>Configurations</em>.</p></li>
+<li><p>Use the visual debugger</p></li>
+<li><p>Learn about built in code inspection tools</p></li>
+<li><p>Do basic <em>refactoring</em> by renaming a variable</p></li>
+<li><p>Make code improvements</p></li>
+</ul>
+<p>We will do all of the above while learning about a pretty popular site for programming puzzles known as the <a class="reference external" href="https://adventofcode.com/">Advent of Code</a>. We will be using this site as a source for some programming puzzles that we’ll do as part of this course. One of the main objectives of this course is to develop our skills in using Python (and programming, in general) to solve analytical problems. Small puzzles like these are an effective and fun way to contribute to this objective. They force you to think about a problem, develop a solution strategy including data structures and logic, and then implement your plan and make it work. More details will follow, but for now, we will:</p>
+<ul class="simple">
+<li><p>Get an overview of the Advent of Code (AoC) site.</p></li>
+<li><p>Learn how to login to the site and read the first puzzle</p></li>
+<li><p>Download the problem data for a puzzle</p></li>
+<li><p>Solve the puzzle in a Jupyter notebook and submit an answer</p></li>
+<li><p>Migrate our solution from a notebook to a Python script in PyCharm</p></li>
+<li><p>Understand the basic flow of solving puzzles in AoC</p></li>
+</ul>
+</section>
+<section id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this heading">¶</a></h2>
+<p>Some good resources to know about:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jetbrains.com/help/pycharm/quick-start-guide.html">PyCharm Quick Start Guide</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/pycharm-guide/">PyCharm for Productive Python Development (Guide)</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/learn/get-started/basics">Getting Started with VSCode</a></p></li>
+</ul>
+</section>
+<section id="downloads">
+<h2>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1YUnIPVm0Mp_s64lw7D1VnWL25sHwffW2/view?usp=sharing">aoc.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>You’ll see in the following screencast that I introduce the Advent of Code puzzles using
+the 2020 version. The entire history of puzzles is available. Just make sure you go to
+the AoC 2020 page - <a class="reference external" href="https://adventofcode.com/2020">https://adventofcode.com/2020</a> if you want to follow along with the video. When I assign puzzles during the
+semester, we might use puzzles from different years.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/Uc0SGU2zOpM">SCREENCAST: Getting started with PyCharm and AoC</a> (28:09)</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Python IDEs and AoC Programming Puzzles</a><ul>
+<li><a class="reference internal" href="#intro-and-objectives">Intro and Objectives</a></li>
+<li><a class="reference internal" href="#readings">Readings</a></li>
+<li><a class="reference internal" href="#downloads">Downloads</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="jupyter_notebooks.html"
+                          title="previous chapter">Jupyter notebooks</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod2_statml_modeling_sklearn.html"
+                          title="next chapter">Statistical/ML modeling with scikit-learn</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/python_ides.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod2_statml_modeling_sklearn.html" title="Statistical/ML modeling with scikit-learn"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="jupyter_notebooks.html" title="Jupyter notebooks"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod1_foundation.html" >Module 1: Foundation for advanced analytics with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Python IDEs and AoC Programming Puzzles</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

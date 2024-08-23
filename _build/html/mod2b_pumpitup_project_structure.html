@@ -1,0 +1,382 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Using cookiecutter templates for project structure &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pump it Up: Data Prep" href="mod2c_pumpitup_dataprep.html" />
+    <link rel="prev" title="Sklearn review and Ensemble models" href="mod2a_sklearn_review.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod2c_pumpitup_dataprep.html" title="Pump it Up: Data Prep"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod2a_sklearn_review.html" title="Sklearn review and Ensemble models"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" accesskey="U">Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using cookiecutter templates for project structure</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="using-cookiecutter-templates-for-project-structure">
+<h1>Using cookiecutter templates for project structure<a class="headerlink" href="#using-cookiecutter-templates-for-project-structure" title="Permalink to this heading">¶</a></h1>
+<p>In this submodule we’ll learn how to use cookiecutters to help structure our analysis projects. First we’ll take a look at the analysis problem we’ll be using as our example and then we’ll create a project structure using a cookiecutter.</p>
+<p>The following screencast will help guide you through this submodule:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/LvSH6KwvIck">SCREENCAST: Creating a new project structure</a> (22:50)</p></li>
+</ul>
+<section id="the-pump-it-up-project">
+<h2>The Pump it Up Project<a class="headerlink" href="#the-pump-it-up-project" title="Permalink to this heading">¶</a></h2>
+<p>For our exploration of more classification methods, we are going to use an ongoing practice competition
+administered by <a class="reference external" href="https://www.drivendata.org/">DrivenData.org</a>. You do not need to create an account as
+I will provide the data. Of course, you can create an account if you want to be able to submit solutions
+to have them scored. The competition we’ll be using is called <a class="reference external" href="https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/">Pump it Up: Data mining the water table</a>. Visit the main link I just provided and read the summary of the competition. It is a classification problem with three possible outcomes corresponding to the working condition of wells in Tanzania. Read the <a class="reference external" href="https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/">Problem Description page</a> to learn about the data elements we will be working with. You’ll see that the majority of the data is categorical in nature, though there are a few numeric fields.</p>
+<p>Since this is an ongoing competition, we get training data that includes the target variable values (i.e. we get <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(y\)</span>) and then a set of test data with just the predictor values (<span class="math notranslate nohighlight">\(X\)</span>). For purposes of this analysis, we’ll also resplit the training data to have our own test data for which we have the “answers”. If we decide to actually make submissions in the competition, we will simply refit our models using all of the training data.</p>
+<p>In addition to this being an interesting and challenging dataset to use for predictive modeling, I also chose this because DrivenData.org are the creators of a well-known project structure template known as <a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter-datascience</a>. As you have already seen from the syllabus, this course is about more than just modeling and analysis. We will also explore various software engineering topics in the context of doing analytics work. One of the first topics we will address is creating a coherent folder structure for your analytics projects.</p>
+<p>So, now that you know a little about the data we’ll be analyzing, let’s learn about creating project templates with <a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/">cookiecutter</a> and then using such a template for this project.</p>
+<section id="so-how-do-you-structure-a-python-project">
+<h3>So, how do you structure a Python project?<a class="headerlink" href="#so-how-do-you-structure-a-python-project" title="Permalink to this heading">¶</a></h3>
+<p>There are no shortage of opinions on this question and there’s no one
+right answer. As the Python packaging ecosystem has evolved over time,
+so has the way one can and/or should structure Python projects. In
+addition, different types of projects (e.g. single installable library
+package vs a web app) might call for <a class="reference external" href="https://realpython.com/python-application-layouts/">different types of project
+layouts</a>.</p>
+</section>
+<section id="enter-the-cookiecutter">
+<h3>Enter, the Cookiecutter<a class="headerlink" href="#enter-the-cookiecutter" title="Permalink to this heading">¶</a></h3>
+<p>Arising from this need to have a simple way to quickly create good
+project structures for different types of projects was the
+<a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/">Cookiecutter</a>. From
+the docs:</p>
+<blockquote>
+<div><p>A command-line utility that creates projects from cookiecutters
+(project templates), e.g. creating a Python package project from a
+Python package project template.</p>
+</div></blockquote>
+<p>In a nutshell, from a simple json configuration file and an example
+folder and file structure, the cookiecutter program asks us a few
+questions and then generates a skeleton project structure (set of
+folders and files). It does this by using <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja2
+templates</a>. Here’s what
+a simple <em>cookiecutter.json</em> file might look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;project_name&quot;</span><span class="p">:</span> <span class="s2">&quot;project name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;repo_name&quot;</span><span class="p">:</span> <span class="s2">&quot;{{ cookiecutter.project_name }}&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Your name (or your organization/company/team)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A short description of the project.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;open_source_license&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;MIT&quot;</span><span class="p">,</span> <span class="s2">&quot;BSD-3-Clause&quot;</span><span class="p">,</span> <span class="s2">&quot;No license file&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The key values are the cookiecutter attributes that you want to define
+and the values are the default values and/or options. The
+<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">SOMETHING</span> <span class="pre">}}</span></code> are the templates. Notice that the default value for
+<code class="docutils literal notranslate"><span class="pre">repo_name</span></code> is just the project name you entered. These templates are
+then used throughout the specific cookiecutter’s example folder
+structure and the cookiecutter program does a big “Search and Replace”,
+filling in templates with their values. Simple but very powerful.</p>
+<p>Various people have created different cookiecutters (i.e. templates) designed
+for their type of projects and their workflow and tool preferences. The
+most relevant for our purposes is the <a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science
+project</a>.</p>
+<ul class="simple">
+<li><p>It was developed by the folks at
+<a class="reference external" href="https://www.drivendata.org/">DrivenData.org</a>,</p></li>
+<li><p>has a project structure that is focused on data science type work,</p></li>
+<li><p>the <a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">main project documentation
+page</a> has
+a really good introduction to the importance of good project
+structure and software engineering practices aimed at data science
+folks who might not be used to thinking of such things. READ IT.</p></li>
+</ul>
+<p>As was intended in the cookiecutter world, other people cloned the
+<a class="reference external" href="https://github.com/drivendata/cookiecutter-data-science">Cookiecutter Data Science template from
+GitHub</a> and
+modified it to better suit their needs. One notable such template was
+developed by the Molecular Sciences Software Institute for their <a class="reference external" href="https://education.molssi.org/python-package-best-practices/">Python
+Packages Best
+Practices</a>
+set of tutorials which are modeled after the Software Carpentry
+tutorials. In
+their <a class="reference external" href="https://education.molssi.org/python-package-best-practices/01-package-setup/index.html">very first
+lesson</a>
+they walk you through creating a new project structure from their <a class="reference external" href="https://github.com/MolSSI/cookiecutter-cms">CMS
+Cookiecutter</a>. While
+their cookiecutter has some very nice features, I’ve created our own
+modified data science cookiecutter template. I’ve actually created two different cookiecutters for this class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cookiecutter-datascience-simple</span></code> - for simple internal analysis projects</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookiecutter-datascience-aap</span></code> - our main cookiecutter for most projects</p></li>
+</ul>
+<p>Let’s start with <code class="docutils literal notranslate"><span class="pre">cookiecutter-datascience-simple</span></code>. Instead of repeating things here,
+let’s head over to the <a class="reference external" href="https://github.com/misken/cookiecutter-datascience-simple">cookiecutter-datascience-simple GitHub
+page</a> and
+take a look at the README and other content.</p>
+</section>
+<section id="requirements-to-use-this-cookiecutter-template">
+<h3>Requirements to use this cookiecutter template<a class="headerlink" href="#requirements-to-use-this-cookiecutter-template" title="Permalink to this heading">¶</a></h3>
+<p><strong>I’ve already installed cookiecutter in the `aap` conda virtual environment</strong>. So, the
+instructions below are only needed if you want to either pip or conda
+install cookiecutter yourself on some machine or in some virtual
+environment.</p>
+<ul class="simple">
+<li><p>Python 2.7 or 3.5+</p></li>
+<li><p><a class="reference external" href="http://cookiecutter.readthedocs.org/en/latest/installation.html">Cookiecutter Python
+package</a>
+&gt;= 1.4.0: This can be installed with pip by or conda depending on how
+you manage your Python packages. However, we’ll use conda as it is
+easier to install packages into conda virtual environments this way.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda config --add channels conda-forge
+$ conda install cookiecutter
+</pre></div>
+</div>
+</section>
+</section>
+<section id="creating-a-new-project-using-cookiecutter-datascience-simple">
+<h2>Creating a new project using cookiecutter-datascience-simple<a class="headerlink" href="#creating-a-new-project-using-cookiecutter-datascience-simple" title="Permalink to this heading">¶</a></h2>
+<p>Ok, let’s create new project called <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code>.</p>
+<p>To start a new project, run from the directory in which you want your new project to live:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">misken</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">datascience</span><span class="o">-</span><span class="n">simple</span>
+</pre></div>
+</div>
+<p>You’ll get prompted with a series of questions and then your project
+will get created.</p>
+<section id="overview-of-cookiecutter-datascience-simple-project-structure">
+<h3>Overview of cookiecutter-datascience-simple project structure<a class="headerlink" href="#overview-of-cookiecutter-datascience-simple-project-structure" title="Permalink to this heading">¶</a></h3>
+<p>We won’t get into all the details now, but there’s a few things about
+the folder structure that we should discuss. Here’s the structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── pumpitup                &lt;- Your notebooks and scripts will live in the main project folder
+    │   .gitignore                  &lt;- Common file types for git to ignore
+    │   README.md                   &lt;- The top-level README for developers (you) using this project
+    │   template-nb.ipynb           &lt;- A Jupyter notebook template
+    │
+    ├───data                        &lt;- Final and intermediate data
+    │   └───raw                     &lt;- The original, immutable data dump
+    │
+    ├───docs
+    │       notes.md                &lt;- Simple markdown template for project notes
+    │
+    └───output
+            readme.md               &lt;- Guidance for using this folder
+</pre></div>
+</div>
+<p>A few things to note are listed below. Keep in mind that our goal for now is
+to use a <strong>very</strong> simple project structure, suitable for internal analysis by a solo
+analyst. Later we will be using a more complex
+structure for projects in which we might need to share or deploy our code.</p>
+<ol class="arabic simple">
+<li><p>The top level <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> folder will be called the <em>project folder</em>.</p></li>
+<li><p>A few subfolders and files are created.</p></li>
+<li><p>You can delete folders and add folders depending on the project.</p></li>
+<li><p>Your Jupyter notebooks and Python scripts will live side by side in the main project folder. This will make it very easy to do things like importing modules you create into your Jupyter notebooks. There’s a skeleton Jupyter notebook included in the template - feel free to use or delete.</p></li>
+<li><p>Data files will live in the <cite>data</cite> folder. The original, raw data, which we <strong>never</strong> modify, is stored in the <code class="docutils literal notranslate"><span class="pre">data/raw</span></code> subfolder.</p></li>
+<li><p>For documentation, we’ve just included a markdown file with some typical section headings to use for project notes. Expand as desired. Later in the semester we will learn how to use Sphinx with reStructuredText to write and generate documentation.</p></li>
+</ol>
+</section>
+<section id="adding-files-to-our-new-project">
+<h3>Adding files to our new project<a class="headerlink" href="#adding-files-to-our-new-project" title="Permalink to this heading">¶</a></h3>
+<p>We’ve got some work in process in the form of a few Jupyter
+notebooks and scripts as well both raw and preprocessed data files. All of these are available from the Downloads folder for this session in the <cite>pumpitupsk</cite> subfolder.</p>
+<ul class="simple">
+<li><p>Copy the files from the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder into the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder of the new project</p></li>
+<li><p>Copy the files from the <code class="docutils literal notranslate"><span class="pre">output</span></code> folder into the <code class="docutils literal notranslate"><span class="pre">output</span></code> folder of the new project</p></li>
+<li><p>Copy the rest of the files (and the images folder) in the <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> folder into the main folder of the new project</p></li>
+</ul>
+<p>After doing this, your folder structure will look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="o">---</span><span class="n">pumpitup</span>
+        <span class="o">|</span>   <span class="o">.</span><span class="n">gitignore</span>
+        <span class="o">|</span>   <span class="n">data_prep</span><span class="o">.</span><span class="n">ipynb</span>
+        <span class="o">|</span>   <span class="n">data_prep</span><span class="o">.</span><span class="n">py</span>
+        <span class="o">|</span>   <span class="n">gradient_boosting</span><span class="o">.</span><span class="n">ipynb</span>
+        <span class="o">|</span>   <span class="n">logistic</span><span class="o">.</span><span class="n">py</span>
+        <span class="o">|</span>   <span class="n">model_exploration</span><span class="o">.</span><span class="n">ipynb</span>
+        <span class="o">|</span>   <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+        <span class="o">|</span>   <span class="n">template</span><span class="o">-</span><span class="n">nb</span><span class="o">.</span><span class="n">ipynb</span>
+        <span class="o">|</span>   <span class="n">tree</span><span class="o">.</span><span class="n">txt</span>
+        <span class="o">|</span>
+        <span class="o">+---</span><span class="n">data</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">test_x</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">test_x</span><span class="o">.</span><span class="n">json</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">test_x</span><span class="o">.</span><span class="n">zip</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">train_x</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">train_x</span><span class="o">.</span><span class="n">json</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">train_x</span><span class="o">.</span><span class="n">zip</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">train_y</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>   <span class="o">|</span>   <span class="n">train_y</span><span class="o">.</span><span class="n">zip</span>
+        <span class="o">|</span>   <span class="o">|</span>
+        <span class="o">|</span>   \<span class="o">---</span><span class="n">raw</span>
+        <span class="o">|</span>           <span class="o">.</span><span class="n">gitkeep</span>
+        <span class="o">|</span>           <span class="n">test_x</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>           <span class="n">train_x</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>           <span class="n">train_y</span><span class="o">.</span><span class="n">csv</span>
+        <span class="o">|</span>
+        <span class="o">+---</span><span class="n">docs</span>
+        <span class="o">|</span>       <span class="n">notes</span><span class="o">.</span><span class="n">md</span>
+        <span class="o">|</span>
+        <span class="o">+---</span><span class="n">images</span>
+        <span class="o">|</span>       <span class="n">column_transformer</span><span class="o">.</span><span class="n">png</span>
+        <span class="o">|</span>       <span class="n">LR_C10_score</span><span class="o">.</span><span class="n">png</span>
+        <span class="o">|</span>       <span class="n">pandas_profiling_output</span><span class="o">.</span><span class="n">PNG</span>
+        <span class="o">|</span>       <span class="n">penalties</span><span class="o">.</span><span class="n">png</span>
+        <span class="o">|</span>       <span class="n">regularization_overview</span><span class="o">.</span><span class="n">png</span>
+        <span class="o">|</span>       <span class="n">RF_score</span><span class="o">.</span><span class="n">png</span>
+        <span class="o">|</span>
+        \<span class="o">---</span><span class="n">output</span>
+                        <span class="n">clf_ensemble_1_submission</span><span class="o">.</span><span class="n">csv</span>
+                        <span class="n">clf_LR_final_submission</span><span class="o">.</span><span class="n">csv</span>
+                        <span class="n">clf_RF_submission</span><span class="o">.</span><span class="n">csv</span>
+                        <span class="n">hgbc_1_submission</span><span class="o">.</span><span class="n">csv</span>
+                        <span class="n">logistic_1_submission</span><span class="o">.</span><span class="n">csv</span>
+                        <span class="n">models_clf</span><span class="o">.</span><span class="n">pkl</span>
+                        <span class="n">models_clf_rf</span><span class="o">.</span><span class="n">pkl</span>
+                        <span class="n">pandas_profiling_report</span><span class="o">.</span><span class="n">html</span>
+                        <span class="n">readme</span><span class="o">.</span><span class="n">md</span>
+                        <span class="n">sweetviz_report</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Take a quick look at the template-nb.ipynb notebook. You can always delete this or use it for new notebooks.</p>
+</section>
+<section id="putting-project-under-version-control">
+<h3>Putting project under version control<a class="headerlink" href="#putting-project-under-version-control" title="Permalink to this heading">¶</a></h3>
+<p>Open a git bash shell and navigate to your new <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> project directory.</p>
+<p>Initialize git repo and add files to staging area. Note we will not track data files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">*.</span><span class="n">py</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">*.</span><span class="n">ipynb</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">*.</span><span class="n">html</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">md</span>
+</pre></div>
+</div>
+<p>Do our initial commit.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;initial commit&#39;</span>
+</pre></div>
+</div>
+<p>Now go to GitHub and create a new repository named <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> and then add the remote.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">pumpitup</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Instead of pushing from the git bash shell command line, let’s use GitHub Desktop to push our local commit up to GitHub.</p>
+<p>Now we are ready to keep working on this project.</p>
+<p>Move on to the next submodule, <a class="reference internal" href="mod2c_pumpitup_dataprep.html"><span class="doc">Pump it Up: Data Prep</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Using cookiecutter templates for project structure</a><ul>
+<li><a class="reference internal" href="#the-pump-it-up-project">The Pump it Up Project</a><ul>
+<li><a class="reference internal" href="#so-how-do-you-structure-a-python-project">So, how do you structure a Python project?</a></li>
+<li><a class="reference internal" href="#enter-the-cookiecutter">Enter, the Cookiecutter</a></li>
+<li><a class="reference internal" href="#requirements-to-use-this-cookiecutter-template">Requirements to use this cookiecutter template</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creating-a-new-project-using-cookiecutter-datascience-simple">Creating a new project using cookiecutter-datascience-simple</a><ul>
+<li><a class="reference internal" href="#overview-of-cookiecutter-datascience-simple-project-structure">Overview of cookiecutter-datascience-simple project structure</a></li>
+<li><a class="reference internal" href="#adding-files-to-our-new-project">Adding files to our new project</a></li>
+<li><a class="reference internal" href="#putting-project-under-version-control">Putting project under version control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod2a_sklearn_review.html"
+                          title="previous chapter">Sklearn review and Ensemble models</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod2c_pumpitup_dataprep.html"
+                          title="next chapter">Pump it Up: Data Prep</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod2b_pumpitup_project_structure.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod2c_pumpitup_dataprep.html" title="Pump it Up: Data Prep"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod2a_sklearn_review.html" title="Sklearn review and Ensemble models"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" >Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using cookiecutter templates for project structure</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

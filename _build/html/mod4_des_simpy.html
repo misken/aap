@@ -1,0 +1,228 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Discrete-event simulation with SimPy &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data wrangling, visualization, and analysis" href="mod5_data_wrangling_analysis.html" />
+    <link rel="prev" title="Using Python with Excel" href="mod3c_python_excel.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod5_data_wrangling_analysis.html" title="Data wrangling, visualization, and analysis"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod3c_python_excel.html" title="Using Python with Excel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Discrete-event simulation with SimPy</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="discrete-event-simulation-with-simpy">
+<h1>Discrete-event simulation with SimPy<a class="headerlink" href="#discrete-event-simulation-with-simpy" title="Permalink to this heading">¶</a></h1>
+<p>In this module we will:</p>
+<ul class="simple">
+<li><p>learn the basics of building and using discrete-event simulation (DES) models in Python using the SimPy library,</p></li>
+<li><p>learn to build command line interfaces and use configurations files to run different simulation scenarios,</p></li>
+<li><p>deploy a Jupyter notebook to the cloud with Binder for running simulation scenarios.</p></li>
+</ul>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<p>This downloads file will be used for the activities below.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1cVE3JCwY1pyKe0mg13i3niml2yqVba_2/view?usp=sharing">downloads_des.zip</a></p></li>
+</ul>
+<p>Within the downloads file, you’ll find a folder named <code class="docutils literal notranslate"><span class="pre">vaccine_clinic</span></code>. I used the
+<code class="docutils literal notranslate"><span class="pre">cookiecutter-datascience-aap</span></code> template to create the project folder structure. All of
+the notebooks used below are in the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> folder (what a surprise) and the Python
+scripts are in <code class="docutils literal notranslate"><span class="pre">src/vaccine_clinic</span></code>. This is one nice thing about cookiecutters, you
+know where to find things (and put things). You’ll also find a folder named <code class="docutils literal notranslate"><span class="pre">vaccine_clinic_share</span></code> that
+will get used later in the Activities when we learn about running Jupyter notebooks in the cloud.</p>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<section id="getting-started-with-simpy">
+<h3>Getting started with SimPy<a class="headerlink" href="#getting-started-with-simpy" title="Permalink to this heading">¶</a></h3>
+<p>Start by opening the <code class="docutils literal notranslate"><span class="pre">simpy_getting_started_vaccine_clinic.ipynb</span></code> notebook. In it, you’ll:</p>
+<ul class="simple">
+<li><p>get an overview of what DES is and for which kinds of problems it is well suited,</p></li>
+<li><p>learn a bit about how DES works, Python generators and how SimPy uses generators to facilitate DES modeling,</p></li>
+<li><p>build some very basic SimPy models based on a vaccine clinic to start to understand how to build SimPy models,</p></li>
+<li><p>learn the basics of analyzing simulation model output.</p></li>
+</ul>
+<p>Here’s are screencasts that go with this notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/MN2VDroXmw0">SCREENCAST: Overview of DES modeling and the vaccine clinic</a> (15:08)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/c0cmysFYcL0">SCREENCAST: Intro to SimPy</a> (11:29)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/Jiu_-II2Vzg">SCREENCAST: Structure of a SimPy program</a> (17:30)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/voDzHr_BnhA">SCREENCAST: Model2 - simplified clinic patient flow</a> (12:29)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/KDDHAruSbd4">SCREENCAST: Model3 - the full vaccine clinic</a> (19:06)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/6uRiQOfkrQE">SCREENCAST: The run_clinic_function</a> (6:22)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/XkQva17ONI4">SCREENCAST: Processing the timestamps file</a> (15:36)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/3ZkInkDswW4">SCREENCAST: Multiple replications</a> (10:00)</p></li>
+</ul>
+</section>
+<section id="building-a-cli-for-our-vaccine-clinic-simulation-model">
+<h3>Building a CLI for our vaccine clinic simulation model<a class="headerlink" href="#building-a-cli-for-our-vaccine-clinic-simulation-model" title="Permalink to this heading">¶</a></h3>
+<p>Now we’ll make some improvements to our clinic model. In this notebook, <code class="docutils literal notranslate"><span class="pre">vaccine_clinic_model4.ipynb</span></code>, we
+will focus on building a command line interface to our model to facilitate running multiple scenarios.</p>
+<p>Here’s the screencast that goes with this notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/Nz1LfISKHls">SCREENCAST: Intro to building a CLI</a> (13:18)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/7b_EcWqnea8">SCREENCAST: Using argparse to build a CLI for the clinicmodel</a> (20:36)</p></li>
+</ul>
+</section>
+<section id="exploring-vaccine-clinic-model4-py">
+<h3>Exploring vaccine_clinic_model4.py<a class="headerlink" href="#exploring-vaccine-clinic-model4-py" title="Permalink to this heading">¶</a></h3>
+<p>We have made a number of improvements to the model:</p>
+<ul class="simple">
+<li><p>Specifying the global sim inputs through a command line interface (CLI),</p></li>
+<li><p>Getting rid of hard coded processing time distributions,</p></li>
+<li><p>Automating the post-processing of simulation outputs to create summary statistics.</p></li>
+</ul>
+<p>Now we have moved
+it out of the Jupyter notebook and into <code class="docutils literal notranslate"><span class="pre">vaccine_clinic_model4.py</span></code>.
+The model has grown into a more complex application and really isn’t well suited for
+continued development within a Jupyter notebook. In this screencast, I’ll take you on
+a journey through the code so that you have a better understanding of how it is
+structured and how it works. I’ll show you multiple ways to run it and we’ll learn a bit
+about PyCharm <em>run configurations</em>. Adding breakpoints to code and examining variables and
+data structures while stepping through code is a great way to better understand how
+a program works. And of course, it’s a great way to debug your programs.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/Jxp9hUGw9vo">SCREENCAST: Exploring vaccine_clinic_model4.py</a> (30:53)</p></li>
+</ul>
+</section>
+<section id="using-the-vaccine-clinic-model-to-explore-scenarios">
+<h3>Using the vaccine clinic model to explore scenarios<a class="headerlink" href="#using-the-vaccine-clinic-model-to-explore-scenarios" title="Permalink to this heading">¶</a></h3>
+<p>Now that you’ve got a better understanding of DES modeling and how the vaccine clinic model
+works, we’ll end this module by exploring a few different scenarios related to clinic
+capacity and patient volume. Open <code class="docutils literal notranslate"><span class="pre">running_simulation_scenarios.ipynb</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/XmMA508i0nY">SCREENCAST: Running simulation scenarios</a> (13:31)</p></li>
+</ul>
+<p>What if you wanted to share your notebook by having it run in the cloud? There are actually
+several ways of doing this. We will do it using a popular service known as Binder. For this
+next screencast, you’ll be using the <code class="docutils literal notranslate"><span class="pre">vaccine_clinic_share</span></code> folder from the downloads file.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/89kbziWuVc8">SCREENCAST: Running simulation scenarios in the cloud with Binder</a> (16:43)</p></li>
+</ul>
+</section>
+<section id="extending-the-vaccine-clinic-model">
+<h3>Extending the vaccine clinic model<a class="headerlink" href="#extending-the-vaccine-clinic-model" title="Permalink to this heading">¶</a></h3>
+<p>We’ll end this module by exploring a few possible model design changes extensions. Open <code class="docutils literal notranslate"><span class="pre">model_extensions.ipynb</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/ySuvGauU7U0">SCREENCAST: Vaccine clinic model extensions</a> (9:32)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Discrete-event simulation with SimPy</a><ul>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a><ul>
+<li><a class="reference internal" href="#getting-started-with-simpy">Getting started with SimPy</a></li>
+<li><a class="reference internal" href="#building-a-cli-for-our-vaccine-clinic-simulation-model">Building a CLI for our vaccine clinic simulation model</a></li>
+<li><a class="reference internal" href="#exploring-vaccine-clinic-model4-py">Exploring vaccine_clinic_model4.py</a></li>
+<li><a class="reference internal" href="#using-the-vaccine-clinic-model-to-explore-scenarios">Using the vaccine clinic model to explore scenarios</a></li>
+<li><a class="reference internal" href="#extending-the-vaccine-clinic-model">Extending the vaccine clinic model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod3c_python_excel.html"
+                          title="previous chapter">Using Python with Excel</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod5_data_wrangling_analysis.html"
+                          title="next chapter">Data wrangling, visualization, and analysis</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod4_des_simpy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod5_data_wrangling_analysis.html" title="Data wrangling, visualization, and analysis"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod3c_python_excel.html" title="Using Python with Excel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Discrete-event simulation with SimPy</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

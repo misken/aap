@@ -1,0 +1,156 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Using Python with Excel &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Discrete-event simulation with SimPy" href="mod4_des_simpy.html" />
+    <link rel="prev" title="Creating the whatif package" href="mod3b_whatif_packaging.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod4_des_simpy.html" title="Discrete-event simulation with SimPy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod3b_whatif_packaging.html" title="Creating the whatif package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" accesskey="U">Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using Python with Excel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="using-python-with-excel">
+<h1>Using Python with Excel<a class="headerlink" href="#using-python-with-excel" title="Permalink to this heading">¶</a></h1>
+<p>In this submodule, you will learn about using Python to do Excel automation work that we’d usually do with VBA.
+We will explore a few examples motivated by common scenarios such as:</p>
+<ul class="simple">
+<li><p>You have a whole folder full of csv (or Excel) files with the same file structure and you need to combine them into a single file. You might also need to make some changes to the consolidated file.</p></li>
+<li><p>You have an Excel file with multiple sheets of similarly structured data and you want to consolidate them into a single sheet.</p></li>
+<li><p>You have an Excel file with data in “wide” format and you need to convert it to long format, and then perhaps export out individual files (one per the key column(s) in the long formatted data).</p></li>
+<li><p>You have an Excel file acting as a simple flatfile database. Periodically, you get new Excel files that need to get appended to the “database” file.</p></li>
+</ul>
+<p>We’ll also learn about the newish pathlib Python library for working with file paths - very nice. There are several different tools for working with Excel from Python and we’ll explore a few of them. Near the end of the notebook you’ll find a list of very good blog posts from Practical Business Python that are directly relevant to this topic - highly recommended.</p>
+<section id="downloads">
+<h2>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h2>
+<p>This downloads file will be used throughout all of the activities in this submodule.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1dXos99lf_689SGdY1EUyKgIWL5Thcy4Y/view?usp=sharing">downloads_python_excel.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>You’ll be working the <code class="docutils literal notranslate"><span class="pre">using_python_with_excel.ipynb</span></code> notebook. Just work your way through it, exploring the code and trying out the challenge task (answer at end of notebook).</p>
+</section>
+<section id="explore">
+<h2>Explore<a class="headerlink" href="#explore" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pbpython.com/">https://pbpython.com/</a></p></li>
+<li><p><a class="reference external" href="https://www.datacamp.com/community/tutorials/python-excel-tutorial">https://www.datacamp.com/community/tutorials/python-excel-tutorial</a></p></li>
+<li><p>Excel Hell presentation: <a class="reference external" href="https://github.com/chris1610/pbpython/blob/master/presentations/Escaping-Excel-Hell-with-Python-and-Pandas.pdf">https://github.com/chris1610/pbpython/blob/master/presentations/Escaping-Excel-Hell-with-Python-and-Pandas.pdf</a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Using Python with Excel</a><ul>
+<li><a class="reference internal" href="#downloads">Downloads</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+<li><a class="reference internal" href="#explore">Explore</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod3b_whatif_packaging.html"
+                          title="previous chapter">Creating the whatif package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod4_des_simpy.html"
+                          title="next chapter">Discrete-event simulation with SimPy</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod3c_python_excel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod4_des_simpy.html" title="Discrete-event simulation with SimPy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod3b_whatif_packaging.html" title="Creating the whatif package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" >Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Using Python with Excel</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

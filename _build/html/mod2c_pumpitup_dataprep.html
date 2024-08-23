@@ -1,0 +1,130 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Pump it Up: Data Prep &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Classification models for Pump it Up project" href="mod2d_pumpitup_modeling.html" />
+    <link rel="prev" title="Using cookiecutter templates for project structure" href="mod2b_pumpitup_project_structure.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod2d_pumpitup_modeling.html" title="Classification models for Pump it Up project"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod2b_pumpitup_project_structure.html" title="Using cookiecutter templates for project structure"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" accesskey="U">Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pump it Up: Data Prep</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pump-it-up-data-prep">
+<h1>Pump it Up: Data Prep<a class="headerlink" href="#pump-it-up-data-prep" title="Permalink to this heading">¶</a></h1>
+<p>In this submodule, we’ll do a little EDA data prep for the <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> project. This isn’t meant to be an exhaustive example as our focus is really on classification modeling in Module 2. Nevertheless, there are some useful tips in here including:</p>
+<ul class="simple">
+<li><p>automated EDA tools for Python,</p></li>
+<li><p>doing factor lumping with a port of the R package, <code class="docutils literal notranslate"><span class="pre">forcats</span></code>,</p></li>
+<li><p>creating a data prep script,</p></li>
+<li><p>getting your data ready for use with sklearn for classification models.</p></li>
+</ul>
+<p>You’ll be working in your newly created <code class="docutils literal notranslate"><span class="pre">pumpitup</span></code> project folder.</p>
+<p>Start by opening the <code class="docutils literal notranslate"><span class="pre">data_prep.ipynb</span></code> notebook in Jupyter Lab.</p>
+<p>Here is a screencast to help guide you through the notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/HSZILqZCsM8">SCREENCAST: Pump it Up data prep</a> (25:27)</p></li>
+</ul>
+<p>Move on to the last submodule, <a class="reference internal" href="mod2d_pumpitup_modeling.html"><span class="doc">Classification models for Pump it Up project</span></a>.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod2b_pumpitup_project_structure.html"
+                          title="previous chapter">Using cookiecutter templates for project structure</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod2d_pumpitup_modeling.html"
+                          title="next chapter">Classification models for Pump it Up project</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod2c_pumpitup_dataprep.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod2d_pumpitup_modeling.html" title="Classification models for Pump it Up project"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod2b_pumpitup_project_structure.html" title="Using cookiecutter templates for project structure"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" >Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pump it Up: Data Prep</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

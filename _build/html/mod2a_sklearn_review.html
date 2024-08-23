@@ -1,0 +1,199 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sklearn review and Ensemble models &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using cookiecutter templates for project structure" href="mod2b_pumpitup_project_structure.html" />
+    <link rel="prev" title="Statistical/ML modeling with scikit-learn" href="mod2_statml_modeling_sklearn.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod2b_pumpitup_project_structure.html" title="Using cookiecutter templates for project structure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod2_statml_modeling_sklearn.html" title="Statistical/ML modeling with scikit-learn"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" accesskey="U">Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sklearn review and Ensemble models</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sklearn-review-and-ensemble-models">
+<h1>Sklearn review and Ensemble models<a class="headerlink" href="#sklearn-review-and-ensemble-models" title="Permalink to this heading">¶</a></h1>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this heading">¶</a></h2>
+<p>The <a class="reference external" href="http://scikit-learn.org/stable/">sckit-learn module</a> is a full featured Python module for all kinds of data analysis and predictive modeling algorithms. In
+the pcda class we did <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/mis5470/modeling3_unsupervised_scikit_learn.html">one session at the end of the semester</a> that just introduced this library and did some basic statistical/ML modeling. We’ll start by reviewing the basics of using sklearn for statistical and machine learning model building and learn about ensemble models.</p>
+</section>
+<section id="readings-and-review-activities">
+<h2>Readings and review activities<a class="headerlink" href="#readings-and-review-activities" title="Permalink to this heading">¶</a></h2>
+<p>As a review, first take a look through the following sections (and notebooks) in PDSH. We covered all of this back in the <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/mis5470/modeling3_unsupervised_scikit_learn.html">pcda class in our final session</a>. Going through the notebooks will get you back up to speed with sklearn and ML basics.</p>
+<ul>
+<li><p>PDSH - Ch 5: Scikit-Learn</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>05.00-Machine-Learning.ipynb</p></li>
+<li><p>05.01-What-Is-Machine-Learning.ipynb</p></li>
+<li><p>05.02-Introducing-Scikit-Learn.ipynb</p></li>
+<li><p>05.03-Hyperparameters-and-Model-Validation.ipynb</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<p>This downloads file will be used throughout all of the Module 2 activities.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1-Eny9Pq2lqtNAxbMOdBE783Vs4jJV3bM/view?usp=sharing">downloads_sklearn_review_pumpitup.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>We’ll start with a review of sklearn with a focus on the standard estimator API that
+makes it pretty easy to quickly try out different types of predictive models. In addition,
+we’ll explore a class of models known as <em>ensemble models</em>.</p>
+<p>Ensemble models are just like they sound - a collection of models that,
+hopefully, perform better as an aggregated whole than as individual
+models. Modern <a class="reference external" href="https://www.ncei.noaa.gov/products/weather-climate-models/global-ensemble-forecast">weather forecasting relies on ensemble models</a> and
+you’ll see that most Kaggle winners use ensembles of models. Individual
+models can be combined by doing things like averaging individual
+predictions (for regression) or using voting (for classification). Here’s an <a class="reference external" href="https://justindomke.wordpress.com/2021/09/28/the-human-regression-ensemble/?utm_campaign=Data_Elixir&amp;utm_source=Data_Elixir_356/">interesting blog post on using human regression ensembles vs various ML techniques</a>.</p>
+<p>We’ll use one of the Kaggle practice competitions involving trying to classify leaves based on simple images of those leaves.</p>
+<ul class="simple">
+<li><p>you can find the notebook <code class="docutils literal notranslate"><span class="pre">sklearn_gettingstarted_leaf_classification_aap.ipynb</span></code> in the <code class="docutils literal notranslate"><span class="pre">sklearn_ensemble_leaf</span></code> folder within the Downloads file.</p></li>
+<li><dl class="simple">
+<dt>By working through it, we will:</dt><dd><ul>
+<li><p>review sklearn, numpy and a little pandas</p></li>
+<li><p>build, train, test models in sklearn</p></li>
+<li><p>combine different types of models into ensemble models</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Here are screencasts to help guide you through the notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/hHFmMJUX2O0">SCREENCAST: Sklearn review - Intro</a> (8:03)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/5XMgIotZqk8">SCREENCAST: Intro to leaf classification problem</a> (3:31)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/JoaoJcNFoWY">SCREENCAST: Explore and prep data</a> (10:05)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/rekNCpMsrTg">SCREENCAST: Decision Trees</a> (6:22)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/7myXiAFNMsE">SCREENCAST: Visualizing decision trees</a>  (4:34)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/3urNOPhPb8M">SCREENCAST: More classification techniques and ensemble models</a>  (9:02)</p></li>
+</ul>
+<p>When you are done with this, move on to the next submodule, <a class="reference internal" href="mod2b_pumpitup_project_structure.html"><span class="doc">Using cookiecutter templates for project structure</span></a>.</p>
+</section>
+<section id="explore">
+<h2>Explore<a class="headerlink" href="#explore" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pythonspeed.com/articles/vectorization-python/">How vectorization speeds up your Python code</a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Sklearn review and Ensemble models</a><ul>
+<li><a class="reference internal" href="#intro">Intro</a></li>
+<li><a class="reference internal" href="#readings-and-review-activities">Readings and review activities</a></li>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+<li><a class="reference internal" href="#explore">Explore</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod2_statml_modeling_sklearn.html"
+                          title="previous chapter">Statistical/ML modeling with scikit-learn</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod2b_pumpitup_project_structure.html"
+                          title="next chapter">Using cookiecutter templates for project structure</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod2a_sklearn_review.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod2b_pumpitup_project_structure.html" title="Using cookiecutter templates for project structure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod2_statml_modeling_sklearn.html" title="Statistical/ML modeling with scikit-learn"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod2_statml_modeling_sklearn.html" >Statistical/ML modeling with scikit-learn</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sklearn review and Ensemble models</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

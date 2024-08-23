@@ -2,7 +2,7 @@ Statistical/ML modeling with scikit-learn
 ========================================================
 
 The `sckit-learn module <http://scikit-learn.org/stable/>`_ is a full featured Python module for all kinds of data analysis and predictive modeling algorithms. In
-the pcda class we did `one session at the end of the semester <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/modeling3_unsupervised_scikit_learn.html>`_ that just introduced this library and did some basic statistical/ML modeling. We'll pick up
+the pcda class we did `one session at the end of the semester <http://www.sba.oakland.edu/faculty/isken/courses/pcda/modeling3_unsupervised_scikit_learn.html>`_ that just introduced this library and did some basic statistical/ML modeling. We'll pick up
 where that session left off and dive a little deeper both into some advanced modeling concepts as well as some of of sklearn's features such as `preprocessors <https://scikit-learn.org/stable/modules/preprocessing.html>`_ and `pipelines <https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html>`_. 
 
 Through this module you will:

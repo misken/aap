@@ -1,0 +1,280 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Automated web data gathering &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interactivity in data visualization" href="interactive_viz.html" />
+    <link rel="prev" title="Data wrangling, visualization, and analysis" href="mod5_data_wrangling_analysis.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="interactive_viz.html" title="Interactivity in data visualization"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod5_data_wrangling_analysis.html" title="Data wrangling, visualization, and analysis"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod5_data_wrangling_analysis.html" accesskey="U">Data wrangling, visualization, and analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Automated web data gathering</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="automated-web-data-gathering">
+<h1>Automated web data gathering<a class="headerlink" href="#automated-web-data-gathering" title="Permalink to this heading">¶</a></h1>
+<section id="intro-and-objectives">
+<h2>Intro and Objectives<a class="headerlink" href="#intro-and-objectives" title="Permalink to this heading">¶</a></h2>
+<p>We’ll do a number of things including learning about various approaches to getting data from websites including automated downloading, web scraping of HTML, and using web APIs.</p>
+</section>
+<section id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jeannicholashould.com/python-web-scraping-tutorial-for-craft-beers.html">Scraping for Craft Beers - A Dataset Creation Tutorial</a> - BeautifulSoup and Beer. This blog post has some very important information that you should read before getting started on web scraping.</p></li>
+</ul>
+</section>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/13wFXeHCFdFeEQqXm8GaLDp1E_rtZK9yK/view?usp=sharing">downloads_webdata.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>In the Downloads file you’ll find a Jupyter notebook entitled index.ipynb.
+This notebook has descriptions and links to six notebooks, each of which
+demos some aspect of web scraping.</p>
+<p>Just go through the ones covering
+some topic that you want to learn about. For some of them you may need
+to pip install a library.</p>
+<p>Here’s what the index notebook
+contains:</p>
+<section id="introduction-and-preview">
+<h3>Introduction and preview<a class="headerlink" href="#introduction-and-preview" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>getting_data_web.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>overview of webscraping methods</p></li>
+<li><p>strategies</p></li>
+<li><p>be nice</p></li>
+<li><p>preview of the web scraping tasks we’ll do</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/am0naKH9fB4">SCREENCAST: Overview of web scraping</a> (6:01)</p>
+</section>
+<section id="automated-downloading-of-data-files">
+<h3>Automated downloading of data files<a class="headerlink" href="#automated-downloading-of-data-files" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>downloading_files.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>csv and json data</p></li>
+<li><p>data from analytics.usa.gov</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/DVvY6fqHBOI">SCREENCAST: Downloading csv and json files</a> (4:05)</p>
+</section>
+<section id="intro-to-web-scraping-with-beautiful-soup">
+<h3>Intro to web scraping with Beautiful Soup<a class="headerlink" href="#intro-to-web-scraping-with-beautiful-soup" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>web_scraping_beautifulsoup.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>BeautifulSoup, a very widely used web scraping package</p></li>
+<li><p>scraping links out of one of my course websites</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/fZA-q_OSIdo">SCREENCAST: Intro to Beautiful Soup</a> (18:12)</p>
+</section>
+<section id="web-scrape-html-table-of-basketball-stats-into-pandas-dataframe">
+<h3>Web scrape html table of basketball stats into pandas DataFrame<a class="headerlink" href="#web-scrape-html-table-of-basketball-stats-into-pandas-dataframe" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>scrape_nba_playerstats.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>data used by fantasy basketball leagues</p></li>
+<li><p>get data out of html table and into pandas</p></li>
+<li><p>some basic data wrangling in pandas to deal with player trades</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/CCMAdSZfzB4">SCREENCAST: Scraping NBA data from html table</a> (8:49)</p>
+</section>
+<section id="scrape-financial-data-from-sec-xbrl-pages">
+<h3>Scrape financial data from SEC XBRL pages<a class="headerlink" href="#scrape-financial-data-from-sec-xbrl-pages" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>pcda_xbrl_soup.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>tons of financial data available via Edgar</p></li>
+<li><p>XBRL provides scructure to financial statements</p></li>
+<li><p>use BeautifulSoup to find financial elements of interest from 10K filings</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="using-scrapy-and-xpath-for-web-scraping">
+<h3>Using Scrapy and XPath for web scraping<a class="headerlink" href="#using-scrapy-and-xpath-for-web-scraping" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>etsy_xpath_scrapy.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>XPath selectors provide a powerful way to navigate DOM of web pages</p></li>
+<li><p>we’ll scrape product info from Etsy</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/TP6A18VT7mg">SCREENCAST: Using XPath to scrape Etsy data</a> (11:24)</p>
+</section>
+<section id="using-web-apis">
+<h3>Using web APIs<a class="headerlink" href="#using-web-apis" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>web_api.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>web APIs provide a powerful, and usually easier, way to get data from websites</p></li>
+<li><p>many sites provide APIs for developers, data journalists, people like us</p></li>
+<li><p>many APIs require an API key to use</p></li>
+<li><p>websites change</p></li>
+<li><p>examples are from eBird and the NY Times</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="web-apis-data-wrangling-with-pandas">
+<h3>Web APIs + data wrangling with pandas<a class="headerlink" href="#web-apis-data-wrangling-with-pandas" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>web_api_usgs.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>even with web APIs, data wrangling often needed to get data in shape for analysis</p></li>
+<li><p>we’ll get stream flow data for the Paint Creek from the USGS</p></li>
+<li><p>two different approaches for dealing with a tricky header section and getting into a pandas DataFrame</p></li>
+<li><p>time series plot of discharge rate using Seaborn</p></li>
+</ul>
+</div></blockquote>
+<p><a class="reference external" href="https://youtu.be/_bkn_hexH74">SCREENCAST: Using web APIs</a> (24:17)</p>
+</section>
+<section id="using-css-selectors-to-explore-government-data-metadata">
+<h3>Using CSS selectors to explore government data metadata<a class="headerlink" href="#using-css-selectors-to-explore-government-data-metadata" title="Permalink to this heading">¶</a></h3>
+<p>Jupyter notebook: <strong>web_gov_datametadata_css.ipynb</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>CSS selectors provide yet another way of finding content of interest on a web page</p></li>
+<li><p>both BeautifulSoup and lxml support CSS selectors</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="explore-optional">
+<h2>Explore (OPTIONAL)<a class="headerlink" href="#explore-optional" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Chapters 11-13 of Data Wrangling with Python (Kazil and Jarmul) does a really nice job of introducing the various ways of getting data from the web using Python.</p></li>
+<li><p><a class="reference external" href="https://github.com/kjam">Katharine Jarmul’s</a>  and <a class="reference external" href="https://github.com/jackiekazil">Jackie Kazil’s</a> GitHub pages - Lots of good web scraping related repos.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Automated web data gathering</a><ul>
+<li><a class="reference internal" href="#intro-and-objectives">Intro and Objectives</a></li>
+<li><a class="reference internal" href="#readings">Readings</a></li>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a><ul>
+<li><a class="reference internal" href="#introduction-and-preview">Introduction and preview</a></li>
+<li><a class="reference internal" href="#automated-downloading-of-data-files">Automated downloading of data files</a></li>
+<li><a class="reference internal" href="#intro-to-web-scraping-with-beautiful-soup">Intro to web scraping with Beautiful Soup</a></li>
+<li><a class="reference internal" href="#web-scrape-html-table-of-basketball-stats-into-pandas-dataframe">Web scrape html table of basketball stats into pandas DataFrame</a></li>
+<li><a class="reference internal" href="#scrape-financial-data-from-sec-xbrl-pages">Scrape financial data from SEC XBRL pages</a></li>
+<li><a class="reference internal" href="#using-scrapy-and-xpath-for-web-scraping">Using Scrapy and XPath for web scraping</a></li>
+<li><a class="reference internal" href="#using-web-apis">Using web APIs</a></li>
+<li><a class="reference internal" href="#web-apis-data-wrangling-with-pandas">Web APIs + data wrangling with pandas</a></li>
+<li><a class="reference internal" href="#using-css-selectors-to-explore-government-data-metadata">Using CSS selectors to explore government data metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#explore-optional">Explore (OPTIONAL)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod5_data_wrangling_analysis.html"
+                          title="previous chapter">Data wrangling, visualization, and analysis</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="interactive_viz.html"
+                          title="next chapter">Interactivity in data visualization</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/getting_data_from_web.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="interactive_viz.html" title="Interactivity in data visualization"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod5_data_wrangling_analysis.html" title="Data wrangling, visualization, and analysis"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod5_data_wrangling_analysis.html" >Data wrangling, visualization, and analysis</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Automated web data gathering</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

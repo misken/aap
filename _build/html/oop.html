@@ -1,0 +1,162 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Version control with git and GitHub &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Version control with git and GitHub</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="version-control-with-git-and-github">
+<h1>Version control with git and GitHub<a class="headerlink" href="#version-control-with-git-and-github" title="Permalink to this heading">¶</a></h1>
+<section id="intro-and-objectives">
+<h2>Intro and Objectives<a class="headerlink" href="#intro-and-objectives" title="Permalink to this heading">¶</a></h2>
+<p>Learning the basics of version control with git and GitHub are pretty essential skills in the data science world. Once you learn to use version control, you’ll wonder how you ever did without it. It provides tremendous peace of mind.</p>
+<p>After doing the activities in this section, you will be able to:</p>
+<ul class="simple">
+<li><p>understand the basic concepts of version control and the use of git</p></li>
+<li><p>create git repos and use git to stage and commit changes</p></li>
+<li><p>review the history of changes and revert to old versions</p></li>
+<li><p>create remote repos in GitHub and push and pull between local and remote repos</p></li>
+<li><p>put an R project under version control and use git and GitHub from within R Studio</p></li>
+</ul>
+</section>
+<section id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>RforE - Section 2.2.3</p></li>
+<li><p><a class="reference external" href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> (Jenny Bryan)</p></li>
+</ul>
+</section>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1uLcuEkyQowug6p6YRKI_IESlngSGIdcW/view?usp=sharing">Downloads_IntroGit.zip</a> (updated with the newer files that match the screencast)</p></li>
+<li><p><a class="reference external" href="https://education.github.com/git-cheat-sheet-education.pdf">git cheat sheet</a> (from GitHub)</p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>In class we will go through the git_lesson_r4ds.md document which shows how to use git and GitHub with R projects</dt><dd><ul>
+<li><p><a class="reference external" href="https://youtu.be/bIGGzxShe1U">SCREENCAST: Intro to git and GitHub</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/nw1zqq7Naos">SCREENCAST: Using git with R Studio</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>I also highly recommend that you:</p>
+<ul class="simple">
+<li><p>Do the <a class="reference external" href="https://swcarpentry.github.io/git-novice/">Version Control with Git lesson</a> at Software Carpentry.</p></li>
+</ul>
+<p>Some other things you should do:</p>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://github.com/">https://github.com/</a>, create a free account and go through their tutorials</p></li>
+<li><p>Read about git integration with R Studio in Section 2.2.3 of R for Everyone</p></li>
+</ul>
+</section>
+<section id="explore-optional">
+<h2>Explore (OPTIONAL)<a class="headerlink" href="#explore-optional" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.dataschool.io/git-and-github-videos-for-beginners/">git and GitHub videos for beginners</a> - Kevin Markham (Data School)</p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v1/Getting-Started">git - Getting Started</a>- the git book</p></li>
+<li><p><a class="reference external" href="http://rogerdudler.github.io/git-guide/">git - The simple guide</a></p></li>
+<li><p><a class="reference external" href="https://happygitwithr.com/resources.html">Resources page</a> from Jenny Bryan’s “Happy Git” book has links to more resources</p></li>
+<li><p><a class="reference external" href="https://www.dataschool.io/how-to-contribute-on-github/">Step by step guide to contributing on GitHub</a>- Kevin Markham (Data School)</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Version control with git and GitHub</a><ul>
+<li><a class="reference internal" href="#intro-and-objectives">Intro and Objectives</a></li>
+<li><a class="reference internal" href="#readings">Readings</a></li>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+<li><a class="reference internal" href="#explore-optional">Explore (OPTIONAL)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/oop.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Version control with git and GitHub</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

@@ -1,0 +1,280 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Jupyter notebooks &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python IDEs and AoC Programming Puzzles" href="python_ides.html" />
+    <link rel="prev" title="Version control with git and GitHub" href="git_intro.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="python_ides.html" title="Python IDEs and AoC Programming Puzzles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="git_intro.html" title="Version control with git and GitHub"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod1_foundation.html" accesskey="U">Module 1: Foundation for advanced analytics with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Jupyter notebooks</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="jupyter-notebooks">
+<h1>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">¶</a></h1>
+<section id="intro-and-objectives">
+<h2>Intro and Objectives<a class="headerlink" href="#intro-and-objectives" title="Permalink to this heading">¶</a></h2>
+<p>We will be using Jupyter notebooks in this class as they make sense for many of the tutorials that we’ll work through. However, we will also be using integrated development environments (IDE) such as <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> or <a class="reference external" href="https://code.visualstudio.com/">VSCode</a>. It’s important that you are comfortable using Jupyter Notebooks as they are ubiquitous in the data science world. But, creating
+production code in a Jupyter Notebook isn’t always a great idea. We’ll see why throughout the course.</p>
+<p>Interactive computing in notebooks is not a new concept. In this module we’ll also take a tour of the history of notebook computing and get a glimpse of where notebook computing might be going.</p>
+</section>
+<section id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this heading">¶</a></h2>
+<p>There are various web based readings scattered throughout the Activities section below.</p>
+<p>Some good resources to know about:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/">Official Jupyter notebook documentation</a></p></li>
+<li><p><a class="reference external" href="https://blog.ja-ke.tech/assets/jupyterlab-shortcuts/Shortcuts.png">Jupyter notebook keyboard shortcuts cheat sheet</a></p></li>
+<li><p><a class="reference external" href="https://damontallen.github.io/IPython-quick-ref-sheets/">Jupyter notebook magic commands cheat sheet</a></p></li>
+</ul>
+</section>
+<section id="downloads">
+<h2>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1RQ8EUX2DQNq8tbQWTJ6_uLg4LjZ9AXxQ/view?usp=sharing">downloads_jupyter.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<section id="a-brief-history-of-notebook-computing">
+<h3>A brief history of notebook computing<a class="headerlink" href="#a-brief-history-of-notebook-computing" title="Permalink to this heading">¶</a></h3>
+<p>There is much to be learned from studying the history of computing. When you know some history it helps you put more recent developments in context. You are better positioned to separate hype from reality and it just makes for a richer computing experience when you have a sense of where we came from. The history of notebook based computing goes back decades (much further if you consider the classic scientific lab notebooks that have been scrawled in for hundreds of years). As a graduate student in the late 1980’s, I remember being stunned when I saw what <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a> could do - check out a <a class="reference external" href="https://www.wolfram.com/mathematica/scrapbook/">scrapbook of the evolution of Mathematica</a> over the last 35 years. Mathematica introduced the notion of a notebook that mixed text and computing, but it was much more than that - it could do symbolic math as well as numerical computing and jaw-dropping scientific plotting (on 1990s computing hardware). I saw it being piloted in undergraduate calculus courses and I used it myself during my graduate engineering studies.</p>
+<p>At the <a class="reference external" href="https://ep2020.europython.eu/">2020 EuroPython Online Conference</a>, there was a terrific talk given on a Brief History of Jupyter Notebooks by William Horton (who has one of the alltime great Twitter handles). It does a very good job of putting Jupyter notebooks into a historical context. Please give it a watch as it is super relevant to this course.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ep2020.europython.eu/media/conference/slides/7UBMYed-a-brief-history-of-jupyter-notebooks.pdf">Slides are here</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=kFhhCOeYcGw&amp;list=PL8uoeex94UhHgMD9GOCbEHWku7pEPx9fW&amp;index=38">YouTube talk is here</a></p></li>
+</ul>
+<p>As you’ll learn from the talk above, Fernando Perez is the main developer behind Jupyter Notebooks. It’s a classic story of a new technology being the result of a combination of need and circumstances. It’s an even better story because Fernando was a <strong>graduate student(!)</strong> when he announced the IPython project to the open source community. He has a <a class="reference external" href="http://blog.fperez.org/2012/01/ipython-notebook-historical.html">pretty famous blog post done in 2012</a> where he reflects on the history of his role in developing the IPython notebook. The presigious journal, Nature, highlighted in 2018, the <a class="reference external" href="https://www.nature.com/articles/d41586-018-07196-1">growing role of Jupyter notebooks in science</a> and then, in 2021, named Jupyter notebooks one of the <a class="reference external" href="https://drive.google.com/file/d/1ZvLGvsUy2HNMk0HXCyIOkFrN-hWUwRfv/view?usp=sharing">Ten computer codes that transformed science</a>. For this, Perez was <a class="reference external" href="https://statistics.berkeley.edu/about/news/congratulations-fernando-perez-ipythonjupyter-recognition-nature">honored by the Department of Statistics at Cal-Berkeley</a>, his current academic home.</p>
+</section>
+<section id="jupyter-lab">
+<h3>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Permalink to this heading">¶</a></h3>
+<p>If you haven’t used Jupyter notebooks in a while, you may not be aware of the newer interface, Jupyter Lab. We’ll be using Jupyter Lab (though you can use the old Notebook interface if you want) in this class.</p>
+<ul class="simple">
+<li><p>In the pcda class, I created a <a class="reference external" href="https://www.youtube.com/watch?v=qmkWL6jRwpI">screencast describing the differences between Jupyter Notebooks and Jupyter Lab</a>. It’s on the <a class="reference external" href="http://www.sba.oakland.edu/faculty/isken/courses/mis5470/python_intro_1.html">Intro to Python</a> page.</p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b">Jupyter Lab: Evolution of the Jupyter Notebook</a> - short article that hits the highlights</p></li>
+</ul>
+</section>
+<section id="the-notebook-wars">
+<h3>The notebook wars<a class="headerlink" href="#the-notebook-wars" title="Permalink to this heading">¶</a></h3>
+<p>In 2018, a <a class="reference external" href="https://www.youtube.com/watch?v=7jiPeIFXb6U">very entertaining and thought provoking presentation was done by Joel Grus</a> at JupyterCon, entitled “I don’t like (Jupyter) notebooks”. Kudos for the conference organizers for inviting a talk centered around the on the shortcomings of Jupyter notebooks for sci computing. Going through the <a class="reference external" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit?usp=sharing">presentation slides</a> (warning, he likes memes) as well as reading the response below from Yihui Xie as well as viewing the slides by Tim Hopper, can make you a better and more aware notebook user and software developer. This discussion gets to the issue of whether we are analysts/modelers or software developers - or both. After reading these, you’ll recognize that many of the same issues apply to how spreadsheets are used (and misused) and loved (and despised).</p>
+<p>Here are some questions to keep in mind as you go through Joel’s talk and some of the response below:</p>
+<ol class="arabic simple">
+<li><p>What is this “hidden state” issue he is talking about?</p></li>
+<li><p>What are the other main dislikes that he has?</p></li>
+<li><p>What are some of the issues associated with Jupyter notebooks and version control?</p></li>
+<li><p>Which of the dislikes that he points out have more to do with the state of development of the Jupyter notebook interface than with the way notebooks fundamentally work?</p></li>
+<li><p>Which of the dislikes that he points out have more to do with how people use notebooks than the notebooks themselves?</p></li>
+<li><p>How does working in a notebook differ from working in an IDE (such as VSCode or PyCharm)?</p></li>
+<li><p>What is the meaning and importance of “Restart kernel and run all”?</p></li>
+<li><p>Going forward, what kinds of things do you think you’ll use notebooks for and what other tools do you think you’ll use for other non-notebook Python coding tasks?</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit?usp=sharing">I don’t like (Jupyter) notebooks (the slides)</a></p></li>
+<li><p>Yihui Xie (author of the R package <cite>knitr</cite>) <a class="reference external" href="https://yihui.name/en/2018/09/notebook-war/">responds from an R perspective</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1XmbeH_sdOKqhi05_FbH2EdRw948i8IvBz1PdfJGbhf4/edit#slide=id.p">I Like Notebooks</a> - a response to Joel Grus from Tim Hopper done in Joel Grus style slides (but not nearly as many)</p></li>
+<li><p>In 2017, <a class="reference external" href="https://blog.jupyter.org/jupyter-receives-the-acm-software-system-award-d433b0dfe3a2">Jupyter received the ACM Software System Award</a> - past winners include Unix, Tex, S (which led to R), Java, <a class="reference external" href="http://www.ncsa.illinois.edu/enabling/mosaic">Mosaic (the first killer web browser)</a>, and more.</p></li>
+</ul>
+<p>To bring this full-cirle, in 2018, an article appeared in The Atlantic on the role of notebooks in making scientific papers “obsolete”. It starts by talking about Mathematica and ends with Jupyter notebooks.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">The Scientific Paper is Obsolete</a></p></li>
+</ul>
+</section>
+<section id="becoming-a-better-notebook-user">
+<h3>Becoming a better notebook user<a class="headerlink" href="#becoming-a-better-notebook-user" title="Permalink to this heading">¶</a></h3>
+<p>If you feel you need a beginner level tutorial first, here is a newer one:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">How to Use Jupyter Notebook in 2020: A Beginner’s Tutorial</a></p></li>
+</ul>
+<p>Now use Jupyter Lab to open <code class="docutils literal notranslate"><span class="pre">notebook_computing_basics.ipynb</span></code>, which is in the Downloads file (or feel free to use the one inside the <code class="docutils literal notranslate"><span class="pre">nbbasics</span></code> folder in the download file for the Git Intro activity). The following screencast will guide you through the notebook. This reviews a few basics and then focuses on higher level best practices for using notebooks for analytics work.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/t9AIbhCybt0">SCREENCAST: Jupyter notebook computing basics</a> (27:01)</p></li>
+</ul>
+<p>There are numerous ways to run Python code with Jupyter notebooks being just one of many:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Jupyter notebooks via Lab or classic Notebook interface</dt><dd><ul>
+<li><p>IPython console from Anaconda prompt</p></li>
+<li><p>IDLE console from Anaconda prompt</p></li>
+<li><p>IDEs like PyCharm and VSCode</p></li>
+<li><p>integrated IPython consoles within IDEs</p></li>
+<li><p>from the command line</p></li>
+<li><p>mix and match these as desired to match your workflow preferences and based on specific project</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>While we are focusing on notebooks now, we will be using a mix of tools throughout the semester.</p>
+</section>
+<section id="case-study-notebook-computing-at-netflix">
+<h3>Case Study: Notebook computing at Netflix<a class="headerlink" href="#case-study-notebook-computing-at-netflix" title="Permalink to this heading">¶</a></h3>
+<p>If you have ever wondered if notebooks can scale, check out this <a class="reference external" href="https://netflixtechblog.com/notebook-innovation-591ee3221233">overview blog post of how Netflix has leveraged Juptyer notebooks</a> in their analytics ecosystem.</p>
+<p>As a teaser, here’s a high level view of their notebook architecture (taken from blog post linked above):</p>
+<img alt="_images/netflix_nb_architecture.jpeg" src="_images/netflix_nb_architecture.jpeg" />
+<p>About a year and a half ago, Netflix released their <a class="reference external" href="https://metaflow.org/">Metaflow framework for data science</a> as an open source project. After developing a bunch of data science infrastructure, they’ve decided to share it.</p>
+</section>
+<section id="the-near-future-of-notebook-computing">
+<h3>The near future of notebook computing<a class="headerlink" href="#the-near-future-of-notebook-computing" title="Permalink to this heading">¶</a></h3>
+<p>There is a lot of work going on in the Jupyter community to improve the notebook ecosystem. The following, short, three part blog series does an outstanding job of looking at the forces of change in the data science community, assessing the recent growth in the Jupyter notebook ecosystem in response to these forces, and looking further into the future of notebook computing. As you are reading these, take note of a tool or two that you might try out at some point during the semester. We will be trying out a few as part of the class but there are tons of new tools.</p>
+<p>How to use Jupyter Notebooks in 2020:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ljvmiranda921.github.io/notebook/2020/03/06/jupyter-notebooks-in-2020/">Part 1: The data science landscape</a></p></li>
+<li><p><a class="reference external" href="https://ljvmiranda921.github.io/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/">Part 2: Ecosystem growth</a></p></li>
+<li><p><a class="reference external" href="https://ljvmiranda921.github.io/notebook/2020/03/30/jupyter-notebooks-in-2020-part-3/">Part 3: Final thoughts</a></p></li>
+</ul>
+<p>There’s a good discussion of this series of posts on Reddit - links are at the end of the Part 3 post.</p>
+</section>
+</section>
+<section id="explore-optional">
+<h2>Explore (OPTIONAL)<a class="headerlink" href="#explore-optional" title="Permalink to this heading">¶</a></h2>
+<section id="more-history">
+<h3>More History<a class="headerlink" href="#more-history" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>This early (#163) <a class="reference external" href="https://xkcd.com/163/">xkcd comic on Donald Knuth</a> is a classic and well worth the click. Oh, and if we’re doing xkcd on Donald Knuth, <a class="reference external" href="https://xkcd.com/816/">here’s another one</a> and finally <a class="reference external" href="https://xkcd.com/341/">DK makes a cameo in this epic 5 part series</a>.</p></li>
+<li><p>Donald Knuth’s <a class="reference external" href="https://www-cs-faculty.stanford.edu/~knuth/lp.html">Literate Programming page</a></p></li>
+<li><p>The <a class="reference external" href="https://archive.org/details/byte-magazine?tab=collection">Byte Magazine</a> archive - I used to go to grocery stores and buy this magazine (those were the days).</p></li>
+</ul>
+</section>
+<section id="more-from-the-jupyter-notebook-ecosystem">
+<h3>More from the Jupyter Notebook ecosystem<a class="headerlink" href="#more-from-the-jupyter-notebook-ecosystem" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/">Unofficial Jupyter Notebooks Extensions</a></p></li>
+<li><p><a class="reference external" href="https://nbdime.readthedocs.io/en/latest/">nbdime</a> - diffing and merging of Jupyter notebooks</p></li>
+<li><p><a class="reference external" href="https://github.com/kynan/nbstripout">nbstripout</a> - Strip output from notebooks (used pre-commit)</p></li>
+<li><p><a class="reference external" href="https://nbdev.fast.ai/">nbdev</a> - Use notebooks as a development environment - created by the folks at <a class="reference external" href="https://www.fast.ai/">fastai</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/debugger.html">Jupyter Lab debugger</a> - a new development and requires a little work to get using with Anaconda.</p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/">The Jupyter Notebook Viewer</a> Web based notebook renderer; easy way to share rendered version of your notebook hosted anywhere on the web</p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/intro.html">Books with Jupyter</a> - by combining Jupyter, Sphinx, Myst, RestructuredText, and more, a whole new world of interactive and computational books is possible.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Jupyter notebooks</a><ul>
+<li><a class="reference internal" href="#intro-and-objectives">Intro and Objectives</a></li>
+<li><a class="reference internal" href="#readings">Readings</a></li>
+<li><a class="reference internal" href="#downloads">Downloads</a></li>
+<li><a class="reference internal" href="#activities">Activities</a><ul>
+<li><a class="reference internal" href="#a-brief-history-of-notebook-computing">A brief history of notebook computing</a></li>
+<li><a class="reference internal" href="#jupyter-lab">Jupyter Lab</a></li>
+<li><a class="reference internal" href="#the-notebook-wars">The notebook wars</a></li>
+<li><a class="reference internal" href="#becoming-a-better-notebook-user">Becoming a better notebook user</a></li>
+<li><a class="reference internal" href="#case-study-notebook-computing-at-netflix">Case Study: Notebook computing at Netflix</a></li>
+<li><a class="reference internal" href="#the-near-future-of-notebook-computing">The near future of notebook computing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#explore-optional">Explore (OPTIONAL)</a><ul>
+<li><a class="reference internal" href="#more-history">More History</a></li>
+<li><a class="reference internal" href="#more-from-the-jupyter-notebook-ecosystem">More from the Jupyter Notebook ecosystem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="git_intro.html"
+                          title="previous chapter">Version control with git and GitHub</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="python_ides.html"
+                          title="next chapter">Python IDEs and AoC Programming Puzzles</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/jupyter_notebooks.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="python_ides.html" title="Python IDEs and AoC Programming Puzzles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="git_intro.html" title="Version control with git and GitHub"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod1_foundation.html" >Module 1: Foundation for advanced analytics with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Jupyter notebooks</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

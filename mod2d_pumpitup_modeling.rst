@@ -8,6 +8,8 @@ In this submodule, we'll build a number of classification models for the ``pumpi
 * logistic regression with regularization,
 * random forests and boosted trees and other ensembles.
 
+A good, short, article on avoiding data leakage when building ML models 
+is `this one by Kevin Markham at Data School <https://www.dataschool.io/machine-learning-data-leakage/>`_.
 
 You'll be working in your newly created ``pumpitup`` project folder. 
 

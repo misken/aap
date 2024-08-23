@@ -1,0 +1,181 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Creating the whatif package &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using Python with Excel" href="mod3c_python_excel.html" />
+    <link rel="prev" title="What-if analysis with Python" href="mod3a_whatif.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod3c_python_excel.html" title="Using Python with Excel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod3a_whatif.html" title="What-if analysis with Python"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" accesskey="U">Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Creating the whatif package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="creating-the-whatif-package">
+<h1>Creating the whatif package<a class="headerlink" href="#creating-the-whatif-package" title="Permalink to this heading">¶</a></h1>
+<p>In this submodule, you will learn about creating a Python package based on our
+whatif work so far. In particular, we will:</p>
+<ul class="simple">
+<li><p>review the basics of Python packaging,</p></li>
+<li><p>use a new cookiecutter better aligned with projects in which we intend to create deployable packages,</p></li>
+<li><p>create a PyCharm project for whatif,</p></li>
+<li><dl class="simple">
+<dt>redesign our whatif code:</dt><dd><ul>
+<li><p>create an abstract <code class="docutils literal notranslate"><span class="pre">Model</span></code> base class containing our <code class="docutils literal notranslate"><span class="pre">data_table</span></code>, <code class="docutils literal notranslate"><span class="pre">goal_seek</span></code>, and <code class="docutils literal notranslate"><span class="pre">simulate</span></code> functions implemented as class methods,</p></li>
+<li><p>learn how to create new model classes that inherit attributes from <code class="docutils literal notranslate"><span class="pre">Model</span></code>,</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>create and install our whatif package,</p></li>
+<li><p>use our installed package,</p></li>
+<li><p>learn how to deal with code changes during package development.</p></li>
+</ul>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<p>This downloads file will be used throughout all of the activities in this submodule.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1RdjXTPoace-hGWX275QxndFohDs-lEQa/view?usp=sharing">downloads_whatif_packaging.zip</a></p></li>
+</ul>
+<p>Here’s a really nice overview of Python packaging done by the same author who created the <a class="reference external" href="https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/README.html">RTWDS Jupyter book</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://py-pkgs.org/">Welcome to Python Packages!</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>You’ll be working through two separate notebooks. One is focused on creating deployable Python packages and the other is an introduction to creating documentation.</p>
+<section id="python-packaging">
+<h3>Python packaging<a class="headerlink" href="#python-packaging" title="Permalink to this heading">¶</a></h3>
+<p>Inside the downloads file you’ll find a folder named <code class="docutils literal notranslate"><span class="pre">whatif</span></code>. Inside that folder is a <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> folder and in there you’ll find <code class="docutils literal notranslate"><span class="pre">what_if_4_project_packaging.ipynb</span></code>. You’ll be going through this notebook for this submodule. Within the notebook there are links to a few short screencasts for specific sections of the notebook.</p>
+</section>
+<section id="creating-documentation">
+<h3>Creating documentation<a class="headerlink" href="#creating-documentation" title="Permalink to this heading">¶</a></h3>
+<p>Within that same folder you’ll find <code class="docutils literal notranslate"><span class="pre">what_if_5_documentation.ipynb</span></code>. This notebook covers the basics of:</p>
+<ul class="simple">
+<li><p>code commenting and docstrings,</p></li>
+<li><p>creating project readme files,</p></li>
+<li><p>creating and generating documentation with Sphinx and reStructuredText.</p></li>
+</ul>
+<p>Here’s a single screencast that demonstrates and illustrates important documentation concepts from this notebook. By the way, <a class="reference external" href="https://bitsofanalytics.org/posts/sphinx-coursewebs/sphinx_coursewebs.html">as I describe in this blog post, my course websites are all created with Sphinx and reStructuredText</a>. In the screencast I show you how my course websites work. You’ll also see how Sphinx can autogenerate API documentation from the docstrings within our code.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/o9hMPAi05YU">SCREENCAST: Writing and generating project documentation</a> (31:53)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Creating the whatif package</a><ul>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a><ul>
+<li><a class="reference internal" href="#python-packaging">Python packaging</a></li>
+<li><a class="reference internal" href="#creating-documentation">Creating documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod3a_whatif.html"
+                          title="previous chapter">What-if analysis with Python</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod3c_python_excel.html"
+                          title="next chapter">Using Python with Excel</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod3b_whatif_packaging.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod3c_python_excel.html" title="Using Python with Excel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod3a_whatif.html" title="What-if analysis with Python"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" >Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Creating the whatif package</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>

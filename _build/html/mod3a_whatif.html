@@ -1,0 +1,173 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>What-if analysis with Python &#8212; aap courseweb</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating the whatif package" href="mod3b_whatif_packaging.html" />
+    <link rel="prev" title="Excel with Python" href="mod3_excel_with_python.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mod3b_whatif_packaging.html" title="Creating the whatif package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mod3_excel_with_python.html" title="Excel with Python"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" accesskey="U">Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">What-if analysis with Python</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="what-if-analysis-with-python">
+<h1>What-if analysis with Python<a class="headerlink" href="#what-if-analysis-with-python" title="Permalink to this heading">¶</a></h1>
+<p>Excel is widely used for building and using models of business problems to explore the impact of various model inputs on key outputs. Built in “what if?” tools such as Excel <a class="reference external" href="https://support.microsoft.com/en-us/office/calculate-multiple-results-by-using-a-data-table-e95e2487-6ca6-4413-ad12-77542a5ea50b">Data Tables</a> and <a class="reference external" href="https://support.microsoft.com/en-us/office/use-goal-seek-to-find-the-result-you-want-by-adjusting-an-input-value-320cb99e-f4a4-417f-b1c3-4f369d6e66c7">Goal Seek</a> are well known to power spreadsheet modelers. How might we do similar modeling and analysis using Python?</p>
+<p>Through a series of notebooks we will learn:</p>
+<ul class="simple">
+<li><p>how to do data tables, goal seek, and Monte-Carlo simulation in Python,</p></li>
+<li><p>the fundamentals of doing object-oriented programming in Python,</p></li>
+<li><p>numerous advanced Python data manipulation functions and techniques.</p></li>
+</ul>
+<section id="downloads-and-other-resources">
+<h2>Downloads and other resources<a class="headerlink" href="#downloads-and-other-resources" title="Permalink to this heading">¶</a></h2>
+<p>This downloads file will be used for the activities below.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1zIhLR4NvDdjJ0IlHZGdXg5gos842dUbr/view?usp=sharing">downloads_whatif_oomodeling.zip</a></p></li>
+</ul>
+</section>
+<section id="activities">
+<h2>Activities<a class="headerlink" href="#activities" title="Permalink to this heading">¶</a></h2>
+<p>We will start with the <code class="docutils literal notranslate"><span class="pre">what_if_1_model_datatable.ipynb</span></code> notebook. In it I will
+introduce the basic model we’ll be working with throughout this module. Then we’ll build a non-object oriented
+Python model and develop one approach to doing Excel style data tables. Then we’ll learn the basics of
+object oriented programming and build an OO version of the same model. Finally, we’ll develop a <code class="docutils literal notranslate"><span class="pre">data_table</span></code> function that
+uses the OO model. Here are a series of screencasts to help you as you work through this notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/MN68kh_4pSc">SCREENCAST: The model</a> (10:11)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/HWqynnk8pKI">SCREENCAST: A non-OO approach to data tables for sensitivity analysis</a> (11:34)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/GEYqa8KX04I">SCREENCAST: Everything is an object in Python</a> (15:11)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/H-X10KFOv_o">SCREENCAST: An OO version of the model</a>  (11:33)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/EzJHmcmccAg">SCREENCAST: A software design decision point</a> (10:01)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/mO5d6ucSGYE">SCREENCAST: Generating scenarios for the data table</a>  (10:42)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/7Ud6sLZt0N4">SCREENCAST: A data table function using the OO model</a>  (12:40)</p></li>
+</ul>
+<p>Now we’ll build on this work and develop a Python based goal seek function. We’ll use the <code class="docutils literal notranslate"><span class="pre">what_if_2_goalseek.ipynb</span></code> notebook.
+This will involve exploring packages like SciPy for doing root finding and we’ll learn a more about what’s going on in Excel when you are using Goal Seek.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/5DzfGIC_HvU">SCREENCAST: Root finding with Python</a> (12:33)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/5t7Bbvine38">SCREENCAST: Goal seeking with the bookstore model</a> (11:16)</p></li>
+</ul>
+<p>Now let’s see how we might do Monte-Carlo simulation with Python and add a new function to our growing
+little Python library of Excel style “what-if?” functions. We’ll use the <code class="docutils literal notranslate"><span class="pre">what_if_3_simulation.ipynb</span></code> notebook.
+In this part we’ll learn about random number generation in Python and see that we can leverage ideas from
+our <code class="docutils literal notranslate"><span class="pre">data_table</span></code> function to create a <code class="docutils literal notranslate"><span class="pre">simulate</span></code> function.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/kJofEHnhXOE">SCREENCAST: Intro to Monte-Carlo simulation model</a> (11:23)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/bJtdyaNCx6o">SCREENCAST: Adding additional uncertainty</a> (7:31)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/9YfJqaUVfhY">SCREENCAST: Building the simulate() function</a> (17:49)</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">What-if analysis with Python</a><ul>
+<li><a class="reference internal" href="#downloads-and-other-resources">Downloads and other resources</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mod3_excel_with_python.html"
+                          title="previous chapter">Excel with Python</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mod3b_whatif_packaging.html"
+                          title="next chapter">Creating the whatif package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mod3a_whatif.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mod3b_whatif_packaging.html" title="Creating the whatif package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mod3_excel_with_python.html" title="Excel with Python"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">aap courseweb</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="mod3_excel_with_python.html" >Excel with Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">What-if analysis with Python</a></li> 
+      </ul>
+    </div>
+		 <p> &#169; Copyright 2021-2023, Mark Isken.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.</p>
+         <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+  </body>
+</html>
