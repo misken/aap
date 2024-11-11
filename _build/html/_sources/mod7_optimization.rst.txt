@@ -1,0 +1,25 @@
+*****************************************
+Optimization modeling with Pyomo
+*****************************************
+
+**THIS MODULE UNDER CONSTRUCTION**
+
+In this module we will:
+
+* 
+*
+
+Downloads and other resources
+=============================
+
+This downloads file will be used for the activities below.
+
+
+
+Activities
+================================
+
+
+
+Getting started with optimization
+----------------------------------
