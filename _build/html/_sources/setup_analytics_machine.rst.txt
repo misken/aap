@@ -64,7 +64,7 @@ some extensions <https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter
 
 Here's a screencast that walks you through the next few steps detailed in this section.
 
-* `SCREENCAST: Creating and using the aap conda virtual environment <FIXME>`_ (13:21)
+* `SCREENCAST: Creating and using the aap conda virtual environment <https://youtu.be/XChMVaQjE40>`_ (19:02)
 
 I encourage you to watch it as I also will show you where these conda virtual *envs* live on your computer and show how they lead to multiple *Python interpreters*. Understanding this will make using IDEs like PyCharm and VSCode, easier.
 
