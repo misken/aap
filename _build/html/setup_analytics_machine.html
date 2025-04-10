@@ -96,12 +96,17 @@
 recommended approach works well. This is the same approach we used
 in the pcda course in Fall 2024 and Winter 2025.</p>
 <p>In order for Jupyter to recognize different conda virtual environments, you may need to <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/">install
-some extensions</a>.  Here’s a screencast that walks you through the next few steps.</p>
+some extensions</a>.</p>
+<p>Here’s a screencast that walks you through the next few steps detailed in this section.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="FIXME">SCREENCAST: Creating and using the aap conda virtual environment</a> (13:21)</p></li>
 </ul>
-<p>I’ve created a screencast to guide you through the steps needed. I encourage you to watch it as I also will show you where these conda virtual <em>envs</em> live on your computer and show how they lead to multiple <em>Python interpreters</em>. Understanding this will make using IDEs like PyCharm and VSCode, easier.</p>
-<p>Just start a open a Windows (or Mac) Anaconda Prompt shell (from the start menu) and do the following:</p>
+<p>I encourage you to watch it as I also will show you where these conda virtual <em>envs</em> live on your computer and show how they lead to multiple <em>Python interpreters</em>. Understanding this will make using IDEs like PyCharm and VSCode, easier.</p>
+<section id="step-1-creating-a-virtual-env-for-running-jupyter-lab">
+<h4>Step 1: Creating a virtual env for running Jupyter Lab<a class="headerlink" href="#step-1-creating-a-virtual-env-for-running-jupyter-lab" title="Link to this heading">¶</a></h4>
+<p>The first thing we’ll do is create a new conda virtual environment
+that we’ll use for running Jupyter Lab.</p>
+<p>Open a Windows (or Mac) Anaconda Prompt shell (from the start menu) and do the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n jupyter -c conda-forge jupyterlab nb_conda_kernels
 </pre></div>
 </div>
@@ -113,8 +118,8 @@ some extensions</a>.  Here’s a screencast that walks you through the next few 
 <p>From then on, Jupyter will be able to recognize different
 conda virtual environments.</p>
 </section>
-<section id="setting-up-our-conda-virtual-environment">
-<h3>Setting up our conda virtual environment<a class="headerlink" href="#setting-up-our-conda-virtual-environment" title="Link to this heading">¶</a></h3>
+<section id="step-2-setting-up-our-conda-virtual-environment-called-aap">
+<h4>Step 2: Setting up our conda virtual environment called aap<a class="headerlink" href="#step-2-setting-up-our-conda-virtual-environment-called-aap" title="Link to this heading">¶</a></h4>
 <p>After installing Anaconda Python on your computer, the next thing you’ll do is to create a new conda virtual environment based on a (YAML) configuration file that I’ve created. Back in the pcda class we learned a bit about conda virtual environments and used one called <code class="docutils literal notranslate"><span class="pre">datasci</span></code> that I created on the pcda VM. If you want an overview on conda virtual environments as well as the details, see:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://towardsdatascience.com/getting-started-with-python-environments-using-conda-32e9f2779307">Getting started with Python environments (using Conda)</a></p></li>
@@ -125,7 +130,7 @@ conda virtual environments.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://drive.google.com/file/d/1HrE6_9ZhK3xqpGS0Z_QDAoBraMbntCA8/view?usp=drive_link">Download aap.yml</a></p></li>
 </ul>
-<p>After downloading it, put it somewhere convenient in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the <a class="reference external" href="FIXME">Installing and Getting Started with Anaconda Python screencast</a>). You should see <code class="docutils literal notranslate"><span class="pre">(base)</span></code> to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don’t want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don’t end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the <code class="docutils literal notranslate"><span class="pre">aap.yml</span></code> file. If you’re in this class I’m sure you know how to do a <code class="docutils literal notranslate"><span class="pre">cd</span></code> (yes, same in Windows as it is in Linux).</p>
+<p>After downloading it, put it somewhere convenient (or leave it in Downloads) in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the <a class="reference external" href="FIXME">Installing and Getting Started with Anaconda Python screencast</a>). You should see <code class="docutils literal notranslate"><span class="pre">(base)</span></code> to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don’t want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don’t end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the <code class="docutils literal notranslate"><span class="pre">aap.yml</span></code> file. If you’re in this class I’m sure you know how to do a <code class="docutils literal notranslate"><span class="pre">cd</span></code> (yes, same in Windows as it is in Linux).</p>
 <p>Let’s look at the <code class="docutils literal notranslate"><span class="pre">aap.yml</span></code> file. It’s pretty self-explanatory (other than maybe <code class="docutils literal notranslate"><span class="pre">channels</span></code>). See the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually">Creating an environment file manually</a> for details on YAML environment files for conda. The <code class="docutils literal notranslate"><span class="pre">channels</span></code> section is telling conda where to look to find software to install. The order matters. In <code class="docutils literal notranslate"><span class="pre">aap</span></code>, conda will first look in the default Anaconda software channel and if not found, will look in a channel called <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. You can think of it as the CRAN for user contributed packages for the Anaconda world. We’ll learn more about dependency management throughout the course. After we create our new <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment, we’ll have all of the packages installed that are in our <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> section (and a whole lot more since these packages have their own dependencies).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">aap</span>
 <span class="n">channels</span><span class="p">:</span>
@@ -158,21 +163,21 @@ conda virtual environments.</p>
 </pre></div>
 </div>
 </section>
-<section id="using-jupyter-lab-with-virtual-environments">
-<h3>Using Jupyter Lab with virtual environments<a class="headerlink" href="#using-jupyter-lab-with-virtual-environments" title="Link to this heading">¶</a></h3>
+<section id="step-3-using-jupyter-lab-with-the-aap-env">
+<h4>Step 3: Using Jupyter Lab with the aap env<a class="headerlink" href="#step-3-using-jupyter-lab-with-the-aap-env" title="Link to this heading">¶</a></h4>
 <p>When you want to use Jupyter lab, you first activate the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> environment and then launch Jupyter lab.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda activate jupyter
 $ jupyter lab
 </pre></div>
 </div>
-<p>Then, once you are in Jupyter Lab, you can change the kernel to <code class="docutils literal notranslate"><span class="pre">aap</span></code>.</p>
+<p>Then, once you are in Jupyter Lab, you can change the kernel to <code class="docutils literal notranslate"><span class="pre">aap</span></code>. I demo this in the screencast.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Similarly, when we use an IDE like PyCharm or VSCode, we will tell it which conda virtual environment to use.</p>
 </div>
 </section>
-<section id="installing-new-packages-into-virtual-environments">
-<h3>Installing new packages into virtual environments<a class="headerlink" href="#installing-new-packages-into-virtual-environments" title="Link to this heading">¶</a></h3>
+<section id="step-4-installing-new-packages-into-virtual-environments">
+<h4>Step 4: Installing new packages into virtual environments<a class="headerlink" href="#step-4-installing-new-packages-into-virtual-environments" title="Link to this heading">¶</a></h4>
 <p>The only reason that you’ll ever need to activate the <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment from an Anaconda prompt is if you need to install some additional software into that virtual environment.</p>
 <p>Anytime you want to install new packages into this <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment, you just activate it and then install the packages like this:</p>
 <blockquote>
@@ -184,6 +189,7 @@ $ conda install &lt;some package(s) you want to install&gt;</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda deactivate
 </pre></div>
 </div>
+</section>
 </section>
 <section id="ide-options">
 <h3>IDE options<a class="headerlink" href="#ide-options" title="Link to this heading">¶</a></h3>
@@ -287,10 +293,13 @@ the method I use.</p>
 </li>
 <li><a class="reference internal" href="#software-installs">Software installs</a><ul>
 <li><a class="reference internal" href="#installing-anaconda-python">Installing Anaconda Python</a></li>
-<li><a class="reference internal" href="#using-virtual-environments-within-jupyter">Using virtual environments within Jupyter</a></li>
-<li><a class="reference internal" href="#setting-up-our-conda-virtual-environment">Setting up our conda virtual environment</a></li>
-<li><a class="reference internal" href="#using-jupyter-lab-with-virtual-environments">Using Jupyter Lab with virtual environments</a></li>
-<li><a class="reference internal" href="#installing-new-packages-into-virtual-environments">Installing new packages into virtual environments</a></li>
+<li><a class="reference internal" href="#using-virtual-environments-within-jupyter">Using virtual environments within Jupyter</a><ul>
+<li><a class="reference internal" href="#step-1-creating-a-virtual-env-for-running-jupyter-lab">Step 1: Creating a virtual env for running Jupyter Lab</a></li>
+<li><a class="reference internal" href="#step-2-setting-up-our-conda-virtual-environment-called-aap">Step 2: Setting up our conda virtual environment called aap</a></li>
+<li><a class="reference internal" href="#step-3-using-jupyter-lab-with-the-aap-env">Step 3: Using Jupyter Lab with the aap env</a></li>
+<li><a class="reference internal" href="#step-4-installing-new-packages-into-virtual-environments">Step 4: Installing new packages into virtual environments</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#ide-options">IDE options</a><ul>
 <li><a class="reference internal" href="#pycharm">PyCharm</a></li>
 <li><a class="reference internal" href="#visual-studio-code-vscode">Visual Studio Code (VSCode)</a></li>
