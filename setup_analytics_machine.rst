@@ -16,7 +16,7 @@ Overview of computing platform options
 A look back at the pcda course
 ------------------------------
 
-In the `pcda course we used a virtual machine running Lubuntu Linux <http://www.sba.oakland.edu/faculty/isken/courses/pcda/pcda_vm.html>`_. We did that for a few reasons:
+In the `pcda course we used a virtual machine running Lubuntu Linux <https://pcda.misken.org/pcda_vm>`_. We did that for a few reasons:
 
 * Many of these tools are totally new to students in the pcda class.
 * I wanted everyone to have the same computing environment with all necessary software pre-installed.
@@ -52,23 +52,31 @@ Click the big Download button and you’ll get taken to a section with the 64bit
 * `Getting Started with Anaconda Individual Edition <https://docs.anaconda.com/anaconda/user-guide/?utm_source=anaconda.com&utm_medium=individual-get-started>`_
 
 
-Getting conda ready to use virtual environments within Jupyter
+Using virtual environments within Jupyter
 ---------------------------------------------------------------
 
-This has been a source of confusion/frustration over the years for many Jupyter users. I finally
-wrote up a `blog post to remind myself the best way to do this <https://bitsofanalytics.org/posts/jupyter-conda-envs/jupyter_conda_envs.html>`_. I encourage you to read through it before continuing with this step.
-
-* `SCREENCAST: Using conda virtual environments with Jupyter Lab <https://youtu.be/2KJHLlPqqDs>`_
+This has been a source of confusion over the years, but the latest
+recommended approach works well. This is the same approach we used
+in the pcda course in Fall 2024 and Winter 2025.
 
 In order for Jupyter to recognize different conda virtual environments, you may need to `install
-some extensions <https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/>`_. Just start a open an Anaconda Prompt shell and do the following::
+some extensions <https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/>`_.  Here's a screencast that walks you through the next few steps.
 
-    > conda install nb_conda_kernels
+* `SCREENCAST: Creating and using the aap conda virtual environment <FIXME>`_ (13:21)
 
-You'll only do this **one time**. From then on, Jupyter will be able to recognize different
-conda virtual environments. Again, see my blog post mentioned above for more details.
+I've created a screencast to guide you through the steps needed. I encourage you to watch it as I also will show you where these conda virtual *envs* live on your computer and show how they lead to multiple *Python interpreters*. Understanding this will make using IDEs like PyCharm and VSCode, easier.
 
+Just start a open a Windows (or Mac) Anaconda Prompt shell (from the start menu) and do the following::
 
+    $ conda create -n jupyter -c conda-forge jupyterlab nb_conda_kernels
+
+You'll only do this **one time**. This step actually does two things. 
+
+1. It creates a virtual environment called ``jupyter`` that we'll use whenever we want to use Jupyter Lab.
+2. It installs the ``nb_conda_kernels`` extension into the ``jupyter`` virtual environment you just created.
+
+From then on, Jupyter will be able to recognize different
+conda virtual environments. 
 
 Setting up our conda virtual environment
 ----------------------------------------
@@ -81,9 +89,9 @@ After installing Anaconda Python on your computer, the next thing you'll do is t
 
 For this course, I've created a virtual environment called ``aap`` (of course). Here's a link to the YAML config file that defines this environment:
 
-* `Download aap.yml <https://drive.google.com/file/d/1HrE6_9ZhK3xqpGS0Z_QDAoBraMbntCA8/view?usp=sharing>`_
+* `Download aap.yml <https://drive.google.com/file/d/1HrE6_9ZhK3xqpGS0Z_QDAoBraMbntCA8/view?usp=drive_link>`_
 
-After downloading it, put it somewhere convenient in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the `Installing and Getting Started with Anaconda Python screencast <https://youtu.be/Z5O6yORGSwg>`_). You should see ``(base)`` to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don't want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don't end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the ``aap.yml`` file. If you're in this class I'm sure you know how to do a ``cd`` (yes, same in Windows as it is in Linux). 
+After downloading it, put it somewhere convenient in your filesystem and open up an Anaconda Prompt (I demo opening an Anaconda command prompt in the `Installing and Getting Started with Anaconda Python screencast <FIXME>`_). You should see ``(base)`` to the left of the prompt. This indicates that you are in the base Anaconda environment. In general, we don't want to work in the base environment. We want to work in a virtual environment of our own creation so that if we mess things up we don't end up having to reinstall Anaconda Python. Change directories in the Anaconda command prompt to where ever you put the ``aap.yml`` file. If you're in this class I'm sure you know how to do a ``cd`` (yes, same in Windows as it is in Linux). 
 
 Let's look at the ``aap.yml`` file. It's pretty self-explanatory (other than maybe ``channels``). See the `Creating an environment file manually <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually>`_ for details on YAML environment files for conda. The ``channels`` section is telling conda where to look to find software to install. The order matters. In ``aap``, conda will first look in the default Anaconda software channel and if not found, will look in a channel called ``conda-forge``. You can think of it as the CRAN for user contributed packages for the Anaconda world. We'll learn more about dependency management throughout the course. After we create our new ``aap`` environment, we'll have all of the packages installed that are in our ``dependencies`` section (and a whole lot more since these packages have their own dependencies).
 
@@ -94,7 +102,7 @@ Let's look at the ``aap.yml`` file. It's pretty self-explanatory (other than may
 	  - defaults
 	  - conda-forge
 	dependencies:
-	  - python=3.9
+	  - python=3.12
 	  - numpy
 	  - pandas
 	  - scipy
@@ -102,9 +110,8 @@ Let's look at the ``aap.yml`` file. It's pretty self-explanatory (other than may
 	  - matplotlib
 	  - seaborn
 	  - ipykernel
+	  - spyder-kernels
 	  - statsmodels
-	  - sphinx
-	  - myst-parser
 	  - cookiecutter
 	  - pillow
 	  - python-graphviz
@@ -113,13 +120,9 @@ Let's look at the ``aap.yml`` file. It's pretty self-explanatory (other than may
 	  - pip
 	  - pip:
 		- simpy
-		- networkx
 		- us
 
 
-* `SCREENCAST: Creating and using the aap conda virtual environment <https://youtu.be/XIddGgcH9U8>`_ (13:21)
-
-I've created a screencast to guide you through the steps needed. I encourage you to watch it as I also will show you where these conda virtual *envs* live on your computer and show how they lead to multiple *Python interpreters*. Understanding this will make using IDEs like PyCharm and VSCode, easier.
 
 To actually create the new environment, run the following command at the Anaconda prompt. See `Creating an environment from an environment.yml file <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file>`_ in the Management Environments section of the docs. Obviously, our file is called ``aap.yml``.
 
@@ -127,24 +130,38 @@ To actually create the new environment, run the following command at the Anacond
 
    conda env create -f aap.yml
 
+Using Jupyter Lab with virtual environments
+------------------------------------------------------
 
-Then, to activate the new environment:
+When you want to use Jupyter lab, you first activate the ``jupyter`` environment and then launch Jupyter lab.
 
-.. code::
+::
 
-   conda activate aap
+    $ conda activate jupyter
+    $ jupyter lab
 
 
-Note that ``(base)`` changes to ``(aap)``. 
-
-The only reason that you'll ever need to activate the ``aap`` environment from an Anaconda prompt is if you need to install some additional software into that virtual environment. The following note is **important**.
+Then, once you are in Jupyter Lab, you can change the kernel to ``aap``.
 
 .. note::
 
-    When we use Jupyter Lab, you'll still be typing ``jupyter lab`` from the base environment and then changing the kernel to use the ``aap`` virtual environment from within Jupyter Lab. Similarly, when we use an IDE like PyCharm or VSCode, we will tell it which conda virtual environment to use.
+    Similarly, when we use an IDE like PyCharm or VSCode, we will tell it which conda virtual environment to use.
 
-    
+Installing new packages into virtual environments
+--------------------------------------------------
+	
+The only reason that you'll ever need to activate the ``aap`` environment from an Anaconda prompt is if you need to install some additional software into that virtual environment. 
 
+Anytime you want to install new packages into this ``aap`` environment, you just activate it and then install the packages like this:
+	
+	$ conda activate aap
+	$ conda install <some package(s) you want to install>
+	
+Again, we will only do this if and when we need to install additional packages into our ``aap`` conda environment. This isn't something you need to worry about now. We'll revisit this when needed.
+	
+To deactivate a conda virtual environment you just do this::
+
+    $ conda deactivate
 
 IDE options
 -----------

@@ -1,8 +1,8 @@
-MIS 4900/6900 - Advanced Analytics with Python (Summer 2024)
+MIS 4900/6900 - Advanced Analytics with Python (Summer 2025)
 ====================================================================
 
 This course is a follow on to my `MIS 4470/5470 - Practical Computing for
-Data Analytics course <http://www.sba.oakland.edu/faculty/isken/courses/mis5470/index.html>`_. In
+Data Analytics course <https://pcda.misken.org/>`_. In
 that course we learn to use both R and Python for various analytical computing tasks. Over
 the years, I've found myself wanting to address more topics and issues but the
 semester just refused to expand. So, I'm creating this new course and it will
@@ -32,7 +32,7 @@ topics will be infused throughout the course.
 
    Software engineering resource center <software_eng>
 
-* My OU website: http://www.sba.oakland.edu/faculty/isken/
+* My OU website: https://misken.org/
 * My Github site: https://github.com/misken/
 * My analytics blog: https://bitsofanalytics.org/
 

@@ -6,7 +6,7 @@ They are all well worth owning. In addition to these free textbooks, we will be 
 
 
 
-Textbooks for Summer 2024
+Textbooks for Summer 2025
 ------------------------------
 
 Python Data Science Handbook (Jake VanderPlas) (PDSH)
