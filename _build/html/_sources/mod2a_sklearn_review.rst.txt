@@ -6,7 +6,7 @@ Intro
 ====================
 
 The `sckit-learn module <http://scikit-learn.org/stable/>`_ is a full featured Python module for all kinds of data analysis and predictive modeling algorithms. In
-the pcda class we did `one session at the end of the semester <http://www.sba.oakland.edu/faculty/isken/courses/pcda/modeling3_unsupervised_scikit_learn.html>`_ that just introduced this library and did some basic statistical/ML modeling. We'll start by reviewing the basics of using sklearn for statistical and machine learning model building and learn about ensemble models.
+the pcda class we did `one session at the end of the semester <https://pcda.misken.org/modeling3_unsupervised_scikit_learn>`_ that just introduced this library and did some basic statistical/ML modeling. We'll start by reviewing the basics of using sklearn for statistical and machine learning model building and learn about ensemble models.
 
   
 Readings and review activities

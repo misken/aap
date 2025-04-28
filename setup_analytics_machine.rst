@@ -158,10 +158,10 @@ Step 4: Installing new packages into virtual environments
 The only reason that you'll ever need to activate the ``aap`` environment from an Anaconda prompt is if you need to install some additional software into that virtual environment. 
 
 Anytime you want to install new packages into this ``aap`` environment, you just activate it and then install the packages like this:
-	
-	$ conda activate aap
-	$ conda install <some package(s) you want to install>
-	
+    
+    $ conda activate aap
+    $ conda install <some package(s) you want to install>
+    
 Again, we will only do this if and when we need to install additional packages into our ``aap`` conda environment. This isn't something you need to worry about now. We'll revisit this when needed.
 	
 To deactivate a conda virtual environment you just do this::

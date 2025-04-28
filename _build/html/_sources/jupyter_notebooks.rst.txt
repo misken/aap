@@ -51,7 +51,7 @@ Jupyter Lab
 
 If you haven't used Jupyter notebooks in a while, you may not be aware of the newer interface, Jupyter Lab. We'll be using Jupyter Lab (though you can use the old Notebook interface if you want) in this class. 
 
-* In the pcda class, I created a `screencast describing the differences between Jupyter Notebooks and Jupyter Lab <https://www.youtube.com/watch?v=qmkWL6jRwpI>`_. It's on the `Intro to Python <http://www.sba.oakland.edu/faculty/isken/courses/pcda/python_intro_1.html>`_ page.
+* In the pcda class, I created a `screencast describing the differences between Jupyter Notebooks and Jupyter Lab <https://www.youtube.com/watch?v=qmkWL6jRwpI>`_. It's on the `Intro to Python <https://pcda.misken.org/python_intro_1>`_ page.
 * `Jupyter Lab: Evolution of the Jupyter Notebook <https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b>`_ - short article that hits the highlights
 
 The notebook wars
