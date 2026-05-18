@@ -94,7 +94,7 @@
 <h3>Using virtual environments within Jupyter<a class="headerlink" href="#using-virtual-environments-within-jupyter" title="Link to this heading">¶</a></h3>
 <p>This has been a source of confusion over the years, but the latest
 recommended approach works well. This is the same approach we used
-in the pcda course in Fall 2024 and Winter 2025.</p>
+in the pcda course in Fall 2025 and Winter 2026.</p>
 <p>In order for Jupyter to recognize different conda virtual environments, you may need to <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/">install
 some extensions</a>.</p>
 <p>Here’s a screencast that walks you through the next few steps detailed in this section.</p>
@@ -180,15 +180,18 @@ $ jupyter lab
 <h4>Step 4: Installing new packages into virtual environments<a class="headerlink" href="#step-4-installing-new-packages-into-virtual-environments" title="Link to this heading">¶</a></h4>
 <p>The only reason that you’ll ever need to activate the <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment from an Anaconda prompt is if you need to install some additional software into that virtual environment.</p>
 <p>Anytime you want to install new packages into this <code class="docutils literal notranslate"><span class="pre">aap</span></code> environment, you just activate it and then install the packages like this:</p>
-<blockquote>
-<div><p>$ conda activate aap
-$ conda install &lt;some package(s) you want to install&gt;</p>
-</div></blockquote>
-<p>Again, we will only do this if and when we need to install additional packages into our <code class="docutils literal notranslate"><span class="pre">aap</span></code> conda environment. This isn’t something you need to worry about now. We’ll revisit this when needed.</p>
-<p>To deactivate a conda virtual environment you just do this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda deactivate
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda activate aap
+$ conda install &lt;some package(s) you want to install&gt;
 </pre></div>
 </div>
+<p>Again, we will only do this if and when we need to install additional packages into our <code class="docutils literal notranslate"><span class="pre">aap</span></code> conda environment. This isn’t something you need to worry about now. We’ll revisit this when needed.</p>
+<p>To deactivate a conda virtual environment you just do this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>$ conda deactivate</p>
+</div></blockquote>
 </section>
 </section>
 <section id="ide-options">
@@ -251,7 +254,7 @@ messed around with this a bit but need to experiment some more. So, if you are a
 </section>
 <section id="installing-github-desktop">
 <h4>Installing GitHub Desktop<a class="headerlink" href="#installing-github-desktop" title="Link to this heading">¶</a></h4>
-<p>There were some large changes last year with respect to how GitHub handles authentication from various apps. The big one for us is that it is not going to be possible to do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> operations from the git bash shell using your GitHub login to authenticate (unless you create an SSH key - more on that below). In the past, you’d just get prompted for your GitHub username and password. For security reasons, GitHub is phasing this out and requiring something known as <em>Personal Access Tokens</em>. One thing you can do is use the freely available <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> application to handle the authentication and push/pull operations between your local computer and GitHub. For example, I could still do my local git work using the git bash shell and then just hop over to GitHub Desktop to push things up to my GitHub account. I’ve created a screencast to show you how this works. In the screencast I’ll also show you what happens when you try to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> from the git bash shell and discuss how this is related to the new credentialing method used by git (that we had a prompt for during the git install).</p>
+<p>There were some large changes a few years ago with respect to how GitHub handles authentication from various apps. The big one for us is that it is not going to be possible to do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> operations from the git bash shell using your GitHub login to authenticate (unless you create an SSH key - more on that below). In the past, you’d just get prompted for your GitHub username and password. For security reasons, GitHub is phasing this out and requiring something known as <em>Personal Access Tokens</em>. One thing you can do is use the freely available <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> application to handle the authentication and push/pull operations between your local computer and GitHub. For example, I could still do my local git work using the git bash shell and then just hop over to GitHub Desktop to push things up to my GitHub account. I’ve created a screencast to show you how this works. In the screencast I’ll also show you what happens when you try to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> from the git bash shell and discuss how this is related to the new credentialing method used by git (that we had a prompt for during the git install).</p>
 <p>However, it is possible to do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> from the git bash shell if you first set up an SSH key. See <a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">these instructions at GitHub on setting up an SSH key</a> to use with your GitHub account. This is actually
 the method I use.</p>
 <p>For now, just follow the link above and download and install GitHub Desktop. I’ll demo its use on the <a class="reference internal" href="git_intro.html"><span class="doc">Version control with git and GitHub</span></a> page.</p>

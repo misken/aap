@@ -23,14 +23,20 @@ We will be using Jupyter notebooks extensively in this course. Read through Chap
    Once you've installed Anaconda Python, you do **NOT** need to do any installation related to basic use of Jupyter notebooks and Jupyter Lab. They are included as part of Anaconda.
 
 
-StackOverflow
---------------
+StackOverflow and LLMs
+-----------------------
 
-StackOverflow is THE number one Q&A site for all things programming. There are tags for every conceivable programming language. It is essential that you learn how to ask good questions on sites like this or when asking questions of me or in our Help Forum.
+StackOverflow WAS number one Q&A site for all things programming. There are tags for every conceivable programming language. It is essential that you learn how to ask good questions on sites like this or when asking questions of me or in our Help Forum.
 
 * `How to ask a question on StackOverflow <https://stackoverflow.com/help/how-to-ask>`_
 
 * `An xkcd comic on error messages in programs <https://xkcd.com/2200>`_. Remember to do the mouse-over after reading the main comic.
+
+But, of course, the last few years has seen the rise of LLMs like ChatGPT, Claude and Gemini. Their training included slurping up all
+the great content from StackOverflow. This has led to a massive 
+decline in StackOverflow traffic. Now the LLMs will have to resort to stealing content from other sources such as your sessions with them.
+
+Read the course policy on generative AI use - it's in Moodle.
 
 Activities
 ================================

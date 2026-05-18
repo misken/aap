@@ -57,7 +57,7 @@ Using virtual environments within Jupyter
 
 This has been a source of confusion over the years, but the latest
 recommended approach works well. This is the same approach we used
-in the pcda course in Fall 2024 and Winter 2025.
+in the pcda course in Fall 2025 and Winter 2026.
 
 In order for Jupyter to recognize different conda virtual environments, you may need to `install
 some extensions <https://docs.anaconda.com/anaconda/user-guide/tasks/use-jupyter-notebook-extensions/>`_.  
@@ -158,6 +158,8 @@ Step 4: Installing new packages into virtual environments
 The only reason that you'll ever need to activate the ``aap`` environment from an Anaconda prompt is if you need to install some additional software into that virtual environment. 
 
 Anytime you want to install new packages into this ``aap`` environment, you just activate it and then install the packages like this:
+
+::
     
     $ conda activate aap
     $ conda install <some package(s) you want to install>
@@ -165,6 +167,8 @@ Anytime you want to install new packages into this ``aap`` environment, you just
 Again, we will only do this if and when we need to install additional packages into our ``aap`` conda environment. This isn't something you need to worry about now. We'll revisit this when needed.
 	
 To deactivate a conda virtual environment you just do this::
+
+::
 
     $ conda deactivate
 
@@ -295,7 +299,7 @@ You will also need a free GitHub account if you don't already have one. Create a
 Installing GitHub Desktop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There were some large changes last year with respect to how GitHub handles authentication from various apps. The big one for us is that it is not going to be possible to do ``git push`` operations from the git bash shell using your GitHub login to authenticate (unless you create an SSH key - more on that below). In the past, you'd just get prompted for your GitHub username and password. For security reasons, GitHub is phasing this out and requiring something known as *Personal Access Tokens*. One thing you can do is use the freely available `GitHub Desktop <https://desktop.github.com/>`_ application to handle the authentication and push/pull operations between your local computer and GitHub. For example, I could still do my local git work using the git bash shell and then just hop over to GitHub Desktop to push things up to my GitHub account. I've created a screencast to show you how this works. In the screencast I'll also show you what happens when you try to do a ``git push`` from the git bash shell and discuss how this is related to the new credentialing method used by git (that we had a prompt for during the git install). 
+There were some large changes a few years ago with respect to how GitHub handles authentication from various apps. The big one for us is that it is not going to be possible to do ``git push`` operations from the git bash shell using your GitHub login to authenticate (unless you create an SSH key - more on that below). In the past, you'd just get prompted for your GitHub username and password. For security reasons, GitHub is phasing this out and requiring something known as *Personal Access Tokens*. One thing you can do is use the freely available `GitHub Desktop <https://desktop.github.com/>`_ application to handle the authentication and push/pull operations between your local computer and GitHub. For example, I could still do my local git work using the git bash shell and then just hop over to GitHub Desktop to push things up to my GitHub account. I've created a screencast to show you how this works. In the screencast I'll also show you what happens when you try to do a ``git push`` from the git bash shell and discuss how this is related to the new credentialing method used by git (that we had a prompt for during the git install). 
 
 However, it is possible to do a ``git push`` from the git bash shell if you first set up an SSH key. See `these instructions at GitHub on setting up an SSH key <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_ to use with your GitHub account. This is actually
 the method I use.

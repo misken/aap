@@ -1,4 +1,4 @@
-MIS 4900/6900 - Advanced Analytics with Python (Summer 2025)
+MIS 4480/5480 - Advanced Analytics with Python (Summer 2025)
 ====================================================================
 
 This course is a follow on to my `MIS 4470/5470 - Practical Computing for
