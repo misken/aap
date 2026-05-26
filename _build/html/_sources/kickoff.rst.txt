@@ -88,4 +88,4 @@ This section will typically have links related to the topic, ... or not. Have fu
 
 * `Practical Business Python <https://pbpython.com/>`_ - terrific blog on using Python for business analysis
 * `Real Python <https://realpython.com/>`_ - high quality Python tutorials, free email newsletter, a bunch of free content and a bunch of premium content for which you need a subscription. I've recently subscribed but in this class we'll only use the free resources. Their tutorials are quite good.
-* `Curated papers, articles, and blogs on data science & machine learning in production <https://github.com/eugeneyan/applied-ml>`_ - a repo at Eugene Yan's GitHub site
+

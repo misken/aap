@@ -114,10 +114,10 @@ As a teaser, here's a high level view of their notebook architecture (taken from
 
 .. image:: images/netflix_nb_architecture.jpeg
 
-About a year and a half ago, Netflix released their `Metaflow framework for data science <https://metaflow.org/>`_ as an open source project. After developing a bunch of data science infrastructure, they've decided to share it.
+A few years ago, Netflix released their `Metaflow framework for data science <https://metaflow.org/>`_ as an open source project. After developing a bunch of data science infrastructure, they've decided to share it.
 
-The near future of notebook computing
-------------------------------------- 
+The near future of notebook computing (OPTIONAL)
+------------------------------------------------- 
 
 There is a lot of work going on in the Jupyter community to improve the notebook ecosystem. The following, short, three part blog series does an outstanding job of looking at the forces of change in the data science community, assessing the recent growth in the Jupyter notebook ecosystem in response to these forces, and looking further into the future of notebook computing. As you are reading these, take note of a tool or two that you might try out at some point during the semester. We will be trying out a few as part of the class but there are tons of new tools.
 
